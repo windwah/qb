@@ -1,0 +1,57 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" href="js/jquery/jquery.mobile-1.4.5.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/select.css" />
+        <title>Marzoni</title>
+    </head>
+    <body>
+        <div data-role="page" id="foo">
+
+            <div data-role="header">
+                <img src="img/search/png/icon_back.png" class="left_back">
+                <img src="img/marzoni_logo.png" class="appLogo">
+                <img src="img/search/png/camera.png" class="right_cam">
+            </div><!-- /header -->
+
+            <div role="main" class="ui-content">
+                <div class="app" style="margin-top:200px">
+                    <img id="search" src="img/choice/png/search.png" style="width:100px" />
+                    <label for="text-basic">輸入產品編號</label>
+                    <input type="text" name="text-basic" id="text-basic" value="">
+                    <a href="#" class="ui-btn ui-btn-inline ui-icon-delete" id="btnSearch">搜尋</a>
+                </div>
+            </div><!-- /content -->
+
+
+        </div><!-- /page -->
+
+        <!-- Start of second page -->
+        <div data-role="page" id="bar">
+
+            <div data-role="header">
+                <h1>Bar</h1>
+            </div><!-- /header -->
+
+            <div role="main" class="ui-content">
+                <p>I'm the second in the source order so I'm hidden when the page loads. I'm just shown if a link that references my id is beeing clicked.</p>
+                <p><a href="#foo">Back to foo</a></p>
+            </div><!-- /content -->
+
+            <div data-role="footer">
+                <h4>Page Footer</h4>
+            </div><!-- /footer -->
+        </div><!-- /page -->
+
+
+        <script src="js/jquery/jquery-1.12.0.min.js"></script>
+        <script src="js/jquery/jquery.mobile-1.4.5.min.js"></script>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/select.js"></script>
+    </body>
+</html>

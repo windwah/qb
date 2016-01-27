@@ -7,7 +7,7 @@
         <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
         <link rel="stylesheet" href="js/jquery/jquery.mobile-1.4.5.min.css" />
-        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <link rel="stylesheet" type="text/css" href="css/select.css" />
         <title>Marzoni</title>
     </head>
     <body>
@@ -17,38 +17,32 @@
 
             <div role="main" class="ui-content">
                 <div class="app">
-                    <a href="#loginForm"><img id="appLogo" src="icon.png"/></a>
+                    <a href="#loginForm"><img id="appLogo" src="img/marzoni_logo.png"/></a>
                 </div>
+                <div class="ui-grid-a ui-responsive selectContent">
+                    <div class="ui-block-a">
+                        <div class="ui-body ui-body-d">
+                            <img id="barcode" src="img/choice/png/barcode.png"/><br>
+                            <label for="text-basic">條碼掃描</label>
+                            
+                        </div>
+                    </div>
+                    <div class="ui-block-b">
+                        <div class="ui-body ui-body-d">
+                            <img id="search" src="img/choice/png/search.png"/>
+                            <label for="text-basic">輸入產品編號</label>
+                        </div>
+                    </div>
+                </div><!-- /grid-a -->
+
             </div><!-- /content -->
-
-
+            <div class="centerLine"></div>
         </div><!-- /page -->
 
-        <!-- Start of second page -->
-        <div data-role="page" id="loginForm">
-
-            <div role="main" class="ui-content">
-                <div class="app">
-                    <div><img id="appLogo" src="img/marzoni_logo.png"/></div>
-                    <div>
-                        <label for="text-basic">用戶名稱</label>
-                        <input type="text" name="text-basic" id="text-basic" value="">
-                    </div>
-                    <div>
-                        <label for="text-basic">登入密碼</label>
-                        <input type="password" name="text-basic" id="text-basic" value="">
-                    </div>
-                    <div>
-                        <a href="#" class="ui-btn ui-btn-inline ui-icon-delete" id="btnLogin">登入</a>
-                    </div>
-                </div>
-            </div><!-- /content -->
-
-        </div><!-- /page -->
 
         <script src="js/jquery/jquery-1.12.0.min.js"></script>
         <script src="js/jquery/jquery.mobile-1.4.5.min.js"></script>
         <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/select.js"></script>
     </body>
 </html>

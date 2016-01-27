@@ -20,25 +20,9 @@
     -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
 }
 
-body {
-    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
-    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
-    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
-    background-image: url("../img/login/png/marzoni_app_login_v2_bg.png");
-    background-repeat: no-repeat;
-    background-position: center top;
-    background-attachment:fixed;
 
-    font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
-    font-size:12px;
-    height:100%;
-    margin:0px;
-    padding:0px;
-    text-transform:uppercase;
-    width:100%;
-}
 .ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wrapper {
-    background-image: url("../img/login/png/marzoni_app_login_v2_bg.png");
+    background-image: url("../img/choice/png/marzoni_app_choice_V2_bg.png");
     background-repeat: no-repeat;
     background-position: center top;
     background-attachment:fixed;
@@ -47,7 +31,7 @@ body {
 .app {
     position:absolute;             /* position in the center of the screen */
     left:50%;
-    top:50%;
+    top:25%;
     height:50px;                   /* text area height */
     width:225px;                   /* text area width */
     text-align:center;
@@ -77,6 +61,25 @@ body {
     }
 }
 
+.selectContent {
+    border: 0 none;
+    margin-top: 400px;
+        padding: 20% 0;
+}
+
+.selectContent  img {
+    display: block;
+    margin: auto;
+    position: relative;
+    width: 50%;
+}
+
+.selectContent label{
+    text-align: center;
+    font-size: 30px;
+    color: #FFF;
+    text-shadow: 0 1px 0 #000;
+}
 h1 {
     font-size:24px;
     font-weight:normal;
@@ -86,38 +89,41 @@ h1 {
     text-align:center;
 }
 
-.event {
-    border-radius:4px;
-    -webkit-border-radius:4px;
-    color:#FFFFFF;
-    font-size:12px;
-    margin:0px 30px;
-    padding:2px 0px;
+.centerLine {
+    background-color: #fff;
+    height: 800px;
+    left: 49%;
+    position: absolute;
+    top: 300px;
+    width: 2px;
 }
 
-.event.listening {
-    background-color:#333333;
-    display:block;
+.ui-header.ui-bar-inherit {
+    background: transparent none repeat scroll 0 0;
+    font-size: 30px !important;
+    color: #FFF !important;
+    text-shadow: 0 1px 0 #000 !important;
+    border: 0 none;
 }
 
-.event.received {
-    background-color:#4B946A;
-    display:none;
+.appLogo{
+    display: block;
+    height: 60px;
+    margin: 30px auto;
 }
 
-@keyframes fade {
-    from { opacity: 1.0; }
-    50% { opacity: 0.4; }
-    to { opacity: 1.0; }
+.left_back {
+    height: 80px;
+    left: 30px;
+    position: absolute;
+    top: -20px;
 }
- 
-@-webkit-keyframes fade {
-    from { opacity: 1.0; }
-    50% { opacity: 0.4; }
-    to { opacity: 1.0; }
-}
- 
-.blink {
-    animation:fade 3000ms infinite;
-    -webkit-animation:fade 3000ms infinite;
+
+.right_cam {
+    display: inline-block;
+    float: right;
+    height: 40px;
+    position: absolute;
+    right: 30px;
+    top: 0;
 }
