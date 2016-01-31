@@ -11,7 +11,7 @@
         <title>Marzoni</title>
     </head>
     <body>
-        <div data-role="page" id="foo">
+        <div data-role="page" id="search_form">
 
             <div data-role="header">
                 <img src="img/search/png/icon_back.png" class="left_back">
@@ -23,8 +23,8 @@
                 <div class="app" style="margin-top:200px">
                     <img id="search" src="img/choice/png/search.png" style="width:100px" />
                     <label for="text-basic">輸入產品編號</label>
-                    <input type="text" name="text-basic" id="text-basic" value="">
-                    <a href="#" class="ui-btn ui-btn-inline ui-icon-delete" id="btnSearch">搜尋</a>
+                    <input type="text" name="text-basic" id="txtSearch" value="">
+                    <a href="#item_detail" class="ui-btn ui-btn-inline ui-icon-delete" id="btnSearch">搜尋</a>
                 </div>
             </div><!-- /content -->
 
@@ -32,26 +32,52 @@
         </div><!-- /page -->
 
         <!-- Start of second page -->
-        <div data-role="page" id="bar">
+        <div data-role="page" id="item_detail">
 
-            <div data-role="header">
-                <h1>Bar</h1>
+            <div data-role="header" class="brown">
+                <img src="img/search/png/icon_back.png" class="left_back" onclick="location.href='#search_form'">
+                <img src="img/marzoni_logo.png" class="appLogo">
+                <img src="img/search/png/camera.png" class="right_cam">
             </div><!-- /header -->
 
-            <div role="main" class="ui-content">
-                <p>I'm the second in the source order so I'm hidden when the page loads. I'm just shown if a link that references my id is beeing clicked.</p>
-                <p><a href="#foo">Back to foo</a></p>
+            <div role="main" class="ui-content item_page">
+                <div id="item_found">
+                    <div class="item_image"></div>
+                    <div class="item_info">
+                        <h1 item-data="item_name" class="item_name"></h1>
+                        <table>
+                            <tr>
+                                <td>物料：</td><td item-data="material"></td>
+                            </tr>
+                            <tr>
+                                <td>尺碼：</td><td item-data="size"></td>
+                            </tr>
+                            <tr>
+                                <td>重量：</td><td item-data="weight"></td>
+                            </tr>
+                            <tr>
+                                <td>顏色：</td><td item-data="color"></td>
+                            </tr>
+                            <tr>
+                                <td>參考：</td><td item-data="ref"></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div id="item_not_found">
+                    <div class="item_image"></div>
+                    <p>找不到產品編號，請重新輸入。</p>   
+                </div>
             </div><!-- /content -->
 
-            <div data-role="footer">
-                <h4>Page Footer</h4>
-            </div><!-- /footer -->
+            <div data-role="footer" class="brown">
+            </div><!-- /header -->
         </div><!-- /page -->
 
 
         <script src="js/jquery/jquery-1.12.0.min.js"></script>
         <script src="js/jquery/jquery.mobile-1.4.5.min.js"></script>
         <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/select.js"></script>
+        <script type="text/javascript" src="js/search.js"></script>
     </body>
 </html>
