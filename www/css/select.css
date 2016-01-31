@@ -129,6 +129,13 @@ h1 {
     top:24px;
 }
 
+.right_keyboard {
+    height: 80px;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+}
+
 .ui-header.brown, .ui-footer.brown{
     background-color: #4d2925;
 }

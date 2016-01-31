@@ -11,21 +11,27 @@ var app = {
     bindEvents: function() {
         $('#search').on('click', this.gotoInputBarcode);
         $('#btnSearch').on('click',this.getItem);
-        $('#inputbarcode .left_back').on('click', this.gotoSelect)
-        $('.right_cam').on('click', this.scan)
-
+        $('#inputbarcode .left_back').on('click', this.gotoSelect);
+        $('.right_cam').on('click', this.gotoScanBarcode);
+        $('#barcode').on('click', this.scan);
+        $('.right_keyboard').on('click', this.gotoInputBarcode);
+        
     },
 
     onClick: function(){
         location.href = 'index.html';
     },
 
-    gotoInputBarcode: function(){
-        location.href = 'search.html';
-    },
-
     gotoSelect: function(){
         location.href = 'select.html';
+    },
+
+    gotoInputBarcode: function(){
+        location.href = 'search.html#inputbarcode';
+    },
+
+    gotoScanBarcode: function(){
+        location.href = 'search.html#scanbaarcode';
     },
 
     getItem: function(){
@@ -72,22 +78,8 @@ var app = {
 
         scanner.scan( function (result) { 
 
-            alert("We got a barcode\n" + 
-            "Result: " + result.text + "\n" + 
-            "Format: " + result.format + "\n" + 
-            "Cancelled: " + result.cancelled);  
-
-           console.log("Scanner result: \n" +
-                "text: " + result.text + "\n" +
-                "format: " + result.format + "\n" +
-                "cancelled: " + result.cancelled + "\n");
-            document.getElementById("info").innerHTML = result.text;
-            console.log(result);
-            /*
-            if (args.format == "QR_CODE") {
-                window.plugins.childBrowser.showWebPage(args.text, { showLocationBar: false });
-            }
-            */
+            $('[name="txtSearch"]').val(result.text);
+            app.getItem();
 
         }, function (error) { 
             console.log("Scanning failed: ", error); 
