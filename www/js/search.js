@@ -34,6 +34,10 @@ var app = {
         location.href = 'search.html#scanbaarcode';
     },
 
+    gotoItemDetail: function(){
+        location.href = 'search.html#item_detail';
+    },
+    
     getItem: function(){
         var data = {i: $('#txtSearch').val()};
         var url = 'http://192.168.1.233:8086/qbservice/get_item.php';
@@ -69,6 +73,7 @@ var app = {
            $('#item_not_found').show();
 
         }
+        app.gotoItemDetail();
     },
 
     scan: function() {
@@ -78,7 +83,7 @@ var app = {
 
         scanner.scan( function (result) { 
 
-            $('[name="txtSearch"]').val(result.text);
+            $('#txtSearch').val(result.text);
             app.getItem();
 
         }, function (error) { 
