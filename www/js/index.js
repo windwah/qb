@@ -34,7 +34,30 @@ var app = {
     },
 
     onUserLogin: function(){
-        location.href = 'select.html';
+        var data = {u: $('#txtUser').val(), p: $('#txtPassword').val()};
+        var url = marzoni.serverUrl + 'qbservice/user_login.php';
+        $.ajax({
+          dataType: "json",
+          url: url,
+          data: data,
+          crossDomain: true,
+        })
+        .done(function( json ) {
+            app.loginHandler(json);
+        })
+        .fail(function( jqxhr, textStatus, error ) {
+            var err = textStatus + ", " + error;
+            console.log( "Request Failed: " + err );
+        });
+        
+    },
+
+    loginHandler:function(json){
+        if(json['login_success']){
+            location.href = 'select.html';
+        }else{
+            alert('用戶名稱或登入密碼錯誤');
+        }
     },
 
     // Update DOM on a Received Event

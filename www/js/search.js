@@ -1,4 +1,3 @@
-
 var app = {
     // Application Constructor
     initialize: function() {
@@ -37,10 +36,10 @@ var app = {
     gotoItemDetail: function(){
         location.href = 'search.html#item_detail';
     },
-    
+
     getItem: function(){
         var data = {i: $('#txtSearch').val()};
-        var url = 'http://192.168.1.233:8086/qbservice/get_item.php';
+        var url = marzoni.serverUrl + 'qbservice/get_item.php';
 
         $.ajax({
           dataType: "json",
@@ -61,12 +60,24 @@ var app = {
         $('#item_found').hide();
         $('#item_not_found').hide();
         if(!json['error']){
+           $('[item-data="item_number"]').html(json.item_number);
            $('[item-data="item_name"]').html(json.full_name);
-           $('[item-data="material"]').html(json.material);
+           $('[item-data="pd_name"]').html(json.pd_name);
+           $('[item-data="material"]').html(json.material.join("; "));
            $('[item-data="size"]').html(json.size);
            $('[item-data="weight"]').html(json.weight);
-           $('[item-data="color"]').html(json.color);
+           $('[item-data="color"]').html(json.color.join("; "));
            $('[item-data="ref"]').html(json.ref);
+            $('[item-data="qtyLv"]').removeClass('lv_red').removeClass('lv_yellow').removeClass('lv_green');
+            if(json.qty < marzoni.minQty)
+                $('[item-data="qtyLv"]').addClass('lv_red');
+            else if( json.qty < marzoni.avgQty )
+                $('[item-data="qtyLv"]').addClass('lv_yellow');
+            else
+                $('[item-data="qtyLv"]').addClass('lv_green');
+            var itemImg = $('<img src="img/no-image-thumb.png" />');
+            $('.item_image').css("background-image",'url("../img/no-image-thumb.png"');
+
            $('#item_found').show();
 
         }else{

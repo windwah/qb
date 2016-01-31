@@ -62,7 +62,8 @@
                 <div id="item_found">
                     <div class="item_image"></div>
                     <div class="item_info">
-                        <h1 item-data="item_name" class="item_name"></h1>
+                        <div item-data="item_name" class="item_name"></div>
+                        <div item-data='qtyLv' class="stock_bar"></div>
                         <table>
                             <tr>
                                 <td>物料：</td><td item-data="material"></td>
@@ -97,6 +98,7 @@
         <script src="js/jquery/jquery.mobile-1.4.5.min.js"></script>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="barcodescanner.js"></script>
+        <script type="text/javascript" src="js/marzoni.js"></script>
         <script type="text/javascript" src="js/search.js"></script>
     </body>
 </html>

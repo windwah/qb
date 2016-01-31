@@ -148,8 +148,13 @@ h1 {
     min-height: 500px;
 }
 
-.item_image{
+.item_image {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
     height: 500px;
+    margin: auto;
+    width: 50%;
 }
 
 .item_info{
@@ -166,6 +171,8 @@ h1 {
     font-size: 30px;
     padding: 10px 0 50px;
     text-align: left;
+    width: 80%;
+    float: left;
 }
 
 #search_form{
@@ -177,4 +184,16 @@ h1 {
     min-height: 48px;
     position: fixed;
     width: 100%;
+}
+
+.lv_green {
+    background-image: url("../img/product_detail/png/stock_bar_green.png");
+}
+
+.stock_bar {
+    background-size: contain;
+    float: right;
+    height: 10px;
+    margin-top: 20px;
+    width: 100px;
 }
