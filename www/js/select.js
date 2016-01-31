@@ -9,7 +9,8 @@ var app = {
     // Bind any events that are required on startup. Common events are:
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function() {
-        $('#search').on('click', this.gotoInputBarcode)
+        $('#search').on('click', this.gotoInputBarcode);
+        $('#barcode').on('click', this.gotoScanBarcode);
     },
 
     onClick: function(){
@@ -17,8 +18,12 @@ var app = {
     },
 
     gotoInputBarcode: function(){
-        location.href = 'search.html';
+        location.href = 'search.html#inputbarcode';
     },
+
+    gotoScanBarcode: function(){
+        location.href = 'search.html#scanbaarcode';
+    }
 
 };
 

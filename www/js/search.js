@@ -11,7 +11,9 @@ var app = {
     bindEvents: function() {
         $('#search').on('click', this.gotoInputBarcode);
         $('#btnSearch').on('click',this.getItem);
-        $('#search_form .left_back').on('click', this.gotoSelect)
+        $('#inputbarcode .left_back').on('click', this.gotoSelect)
+        $('.right_cam').on('click', this.scan)
+
     },
 
     onClick: function(){
@@ -28,9 +30,14 @@ var app = {
 
     getItem: function(){
         var data = {i: $('#txtSearch').val()};
-        var url = 'http://localhost:8086/qbservice/getItem.php';
+        var url = 'http://192.168.1.233:8086/qbservice/get_item.php';
 
-        $.getJSON( url, data)
+        $.ajax({
+          dataType: "json",
+          url: url,
+          data: data,
+          crossDomain: true,
+        })
         .done(function( json ) {
             app.refreshItem(json);
         })
@@ -56,6 +63,47 @@ var app = {
            $('#item_not_found').show();
 
         }
+    },
+
+    scan: function() {
+        console.log('scanning');
+        
+        var scanner = cordova.require("cordova/plugin/BarcodeScanner");
+
+        scanner.scan( function (result) { 
+
+            alert("We got a barcode\n" + 
+            "Result: " + result.text + "\n" + 
+            "Format: " + result.format + "\n" + 
+            "Cancelled: " + result.cancelled);  
+
+           console.log("Scanner result: \n" +
+                "text: " + result.text + "\n" +
+                "format: " + result.format + "\n" +
+                "cancelled: " + result.cancelled + "\n");
+            document.getElementById("info").innerHTML = result.text;
+            console.log(result);
+            /*
+            if (args.format == "QR_CODE") {
+                window.plugins.childBrowser.showWebPage(args.text, { showLocationBar: false });
+            }
+            */
+
+        }, function (error) { 
+            console.log("Scanning failed: ", error); 
+        } );
+    },
+
+    encode: function() {
+        var scanner = cordova.require("cordova/plugin/BarcodeScanner");
+
+        scanner.encode(scanner.Encode.TEXT_TYPE, "http://www.nhl.com", function(success) {
+            alert("encode success: " + success);
+          }, function(fail) {
+            alert("encoding failed: " + fail);
+          }
+        );
+
     }
 };
 

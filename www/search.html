@@ -11,7 +11,7 @@
         <title>Marzoni</title>
     </head>
     <body>
-        <div data-role="page" id="search_form">
+        <div data-role="page" id="inputbarcode">
 
             <div data-role="header">
                 <img src="img/search/png/icon_back.png" class="left_back">
@@ -31,11 +31,31 @@
 
         </div><!-- /page -->
 
+        <div data-role="page" id="scanbaarcode">
+
+            <div data-role="header">
+                <img src="img/search/png/icon_back.png" class="left_back">
+                <img src="img/marzoni_logo.png" class="appLogo">
+                <img src="img/search/png/camera.png" class="right_cam">
+            </div><!-- /header -->
+
+            <div role="main" class="ui-content">
+                <div class="app" style="margin-top:200px">
+                    <img id="search" src="img/choice/png/search.png" style="width:100px" />
+                    <label for="text-basic">輸入Brcodse</label>
+                    <input type="text" name="text-basic" id="txtSearch" value="">
+                    <a href="#item_detail" class="ui-btn ui-btn-inline ui-icon-delete" id="btnSearch">搜尋</a>
+                </div>
+            </div><!-- /content -->
+
+
+        </div><!-- /page -->
+
         <!-- Start of second page -->
         <div data-role="page" id="item_detail">
 
             <div data-role="header" class="brown">
-                <img src="img/search/png/icon_back.png" class="left_back" onclick="location.href='#search_form'">
+                <img src="img/search/png/icon_back.png" class="left_back" onclick="location.href='#inputbarcode'">
                 <img src="img/marzoni_logo.png" class="appLogo">
                 <img src="img/search/png/camera.png" class="right_cam">
             </div><!-- /header -->
@@ -78,6 +98,7 @@
         <script src="js/jquery/jquery-1.12.0.min.js"></script>
         <script src="js/jquery/jquery.mobile-1.4.5.min.js"></script>
         <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="barcodescanner.js"></script>
         <script type="text/javascript" src="js/search.js"></script>
     </body>
 </html>
