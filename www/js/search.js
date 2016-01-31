@@ -75,8 +75,7 @@ var app = {
                 $('[item-data="qtyLv"]').addClass('lv_yellow');
             else
                 $('[item-data="qtyLv"]').addClass('lv_green');
-            var itemImg = $('<img src="img/no-image-thumb.png" />');
-            $('.item_image').css("background-image",'url("../img/no-image-thumb.png"');
+            $('.item_image').css("background-image",'url("img/no-image-thumb.png"');
 
            $('#item_found').show();
 
