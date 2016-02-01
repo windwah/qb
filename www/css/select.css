@@ -158,9 +158,11 @@ h1 {
     background-image: url("../img/no-image-thumb.png");
 }
 
-.item_info{
+.item_info, .item_data_detail{
+    display: block;
+    float: left;
     font-size: 24px;
-    padding: 10px;
+    width: 100%;
 }
 
 #item_detail{
@@ -169,11 +171,11 @@ h1 {
 }
 
 .item_name {
+    float: left;
     font-size: 30px;
-    padding: 10px 0 50px;
+    padding: 30px 0 50px;
     text-align: left;
     width: 80%;
-    float: left;
 }
 
 #search_form{
@@ -199,10 +201,14 @@ h1 {
 .lv_yellow {
     background-image: url("../img/product_detail/png/stock_bar_yellow.png");
 }
+
 .stock_bar {
+    background-position: center center;
+    background-repeat: no-repeat;
     background-size: contain;
     float: right;
     height: 10px;
-    margin-top: 20px;
+    margin-right: 20px;
+    padding: 40px 0;
     width: 100px;
 }
