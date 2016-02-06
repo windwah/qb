@@ -26,23 +26,19 @@
     background-repeat: no-repeat;
     background-position: center top;
     background-attachment:fixed;
+    background-size:contain;
 }
 /* Portrait layout (default) */
 .app {
-    position:absolute;             /* position in the center of the screen */
-    left:50%;
-    top:25%;
-    height:50px;                   /* text area height */
-    width:225px;                   /* text area width */
-    text-align:center;
-    padding:0px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
-    margin:-115px 0px 0px -112px;  /* offset vertical: half of image height and text area height */
-                                   /* offset horizontal: half of text area width */
-
+    margin: 30% auto 0;
+    padding: 0;
+    text-align: center;
+    width: 30%;
 }
 
 .app label{
-    font-size: 24px;
+    font-size: 1.5em;
+    font-weight: normal;
     color: #fff;
     text-shadow: 0 1px 0 #000;
 }
@@ -63,8 +59,7 @@
 
 .selectContent {
     border: 0 none;
-    margin-top: 400px;
-        padding: 20% 0;
+    padding: 20% 0;
 }
 
 .selectContent  img {
@@ -76,7 +71,7 @@
 
 .selectContent label{
     text-align: center;
-    font-size: 30px;
+    font-size: 1.5em;
     color: #FFF;
     text-shadow: 0 1px 0 #000;
 }
@@ -91,10 +86,10 @@ h1 {
 
 .centerLine {
     background-color: #fff;
-    height: 800px;
+    height: 50%;
     left: 49%;
     position: absolute;
-    top: 300px;
+    top: 25%;
     width: 2px;
 }
 
@@ -109,28 +104,26 @@ h1 {
 
 .appLogo{
     display: block;
-    height: 60px;
+    width: 40%;
     margin: auto;
 }
 
 .left_back {
-    height: 100px;
+    width: 4%;
     left: 30px;
     position: absolute;
     top: 0px;
 }
 
 .right_cam {
-    display: inline-block;
-    float: right;
-    height: 60px;
     position: absolute;
+    width: 12%;
     right: 30px;
-    top:24px;
+    top:10px;
 }
 
 .right_keyboard {
-    height: 80px;
+    width: 15%;
     position: absolute;
     right: 20px;
     top: 10px;
@@ -172,7 +165,7 @@ h1 {
 
 .item_name {
     float: left;
-    font-size: 30px;
+    font-size: 2em;
     padding: 30px 0 50px;
     text-align: left;
     width: 80%;
@@ -211,4 +204,9 @@ h1 {
     margin-right: 20px;
     padding: 40px 0;
     width: 100px;
+}
+
+.ui-grid-a > .ui-block-a, .ui-grid-a > .ui-block-b {
+    width: 50%;
+    float:left;
 }

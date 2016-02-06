@@ -1,0 +1,29 @@
+body {
+    font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    font-size:8px;
+    height:100%;
+    margin:0px;
+    padding:0px;
+    text-transform:uppercase;
+    width:100%;
+}
+
+.item_info, .item_data_detail {
+    font-size: 14px;
+}
+
+.item_name {
+    font-size: 16px;
+    padding: 30px 0 20px;
+}
+
+.stock_bar {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    float: right;
+    height: 10px;
+    margin-right: 10px;
+    padding: 35px 0;
+    width: 15%;
+}

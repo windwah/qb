@@ -1,4 +1,5 @@
 var app = {
+    
     // Application Constructor
     initialize: function() {
         this.bindEvents();
@@ -8,12 +9,15 @@ var app = {
     // Bind any events that are required on startup. Common events are:
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function() {
+        var _H = $(document).height();
+        var _W = $(document).width();
         $('#search').on('click', this.gotoInputBarcode);
         $('#btnSearch').on('click',this.getItem);
         $('#inputbarcode .left_back').on('click', this.gotoSelect);
         $('.right_cam').on('click', this.gotoScanBarcode);
         $('#barcode').on('click', this.scan);
         $('.right_keyboard').on('click', this.gotoInputBarcode);
+        $('.item_image').height(_H*0.35);
         
     },
 
