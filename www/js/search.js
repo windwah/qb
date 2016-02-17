@@ -72,6 +72,7 @@ var app = {
            $('[item-data="weight"]').html(json.weight);
            $('[item-data="color"]').html(json.color.join("; "));
            $('[item-data="ref"]').html(json.ref);
+           $('[item-data="location"]').html(json.location);
             $('[item-data="qtyLv"]').removeClass('lv_red').removeClass('lv_yellow').removeClass('lv_green');
             if(json.qty < marzoni.minQty)
                 $('[item-data="qtyLv"]').addClass('lv_red');
