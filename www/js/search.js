@@ -92,7 +92,6 @@ var app = {
     },
 
     scan: function() {
-        location.href = 'index.html#select';
         console.log('scanning');
         
         var scanner = cordova.require("cordova/plugin/BarcodeScanner");

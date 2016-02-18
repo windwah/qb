@@ -3,7 +3,7 @@
 <!-- config.xml reference: https://build.phonegap.com/docs/config-xml -->
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
-        id        = "com.pop.marzoni"
+        id        = "com.popbonet.marzoni"
         version   = "1.0.1">
 
     <name>Marzoni</name>
@@ -12,7 +12,7 @@
         Marzoni
     </description>
 
-    <author href="http://windwah.com" email="windwahchan@gmail.com">
+    <author href="http://popbonet.com" email="windwahchan@gmail.com">
         Wah Workshop
     </author>
 
@@ -61,6 +61,7 @@
     -->
 
     <!-- Plugins -->
+    <gap:plugin name="com.phonegap.plugins.barcodescanner" source="npm" />
 
     <!-- Core plugins -->
     <gap:plugin name="org.apache.cordova.battery-status" />
@@ -81,7 +82,7 @@
     <gap:plugin name="org.apache.cordova.network-information" />
     <gap:plugin name="org.apache.cordova.splashscreen" />
     <gap:plugin name="org.apache.cordova.vibration" />
-    <gap:plugin name="com.phonegap.plugins.barcodescanner"/>
+
 
 
     <!-- Third party plugins -->
@@ -120,7 +121,7 @@
     <gap:splash src="www/res/screen/ios/screen-ipad-portrait.png"           gap:platform="ios"     width="768" height="1024" />
     <gap:splash src="www/res/screen/ios/screen-ipad-landscape.png"          gap:platform="ios"     width="1024" height="768" />
     <gap:splash src="www/res/screen/windows-phone/screen-portrait.jpg"      gap:platform="winphone" />
-    <preference name="SplashScreenDelay" value="10000" />
+    <preference name="SplashScreenDelay" value="5000" />
     <!--
         Define access to external domains.
 
