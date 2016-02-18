@@ -98,9 +98,10 @@ var app = {
 
         scanner.scan( function (result) { 
 
-            $('#txtSearch').val(result.text);
-            alert(result.cancelled);
-            app.getItem();
+            if(!result.cancelled){
+                $('#txtSearch').val(result.text);
+                app.getItem();
+            }
 
         }, function (error) { 
             console.log("Scanning failed: ", error); 
