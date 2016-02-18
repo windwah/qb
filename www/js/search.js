@@ -14,7 +14,7 @@ var app = {
         $('#search').on('click', this.gotoInputBarcode);
         $('#btnSearch').on('click',this.getItem);
         $('#inputbarcode .left_back').on('click', this.gotoSelect);
-        $('.right_cam').on('click', this.gotoScanBarcode);
+        $('.right_cam').on('click', this.scan);
         $('#barcode').on('click', this.scan);
         $('.right_keyboard').on('click', this.gotoInputBarcode);
         $('.item_image').height(_H*0.35);
@@ -26,19 +26,19 @@ var app = {
     },
 
     gotoSelect: function(){
-        location.href = 'select.html';
+        location.href = 'index.html#select';
     },
 
     gotoInputBarcode: function(){
-        location.href = 'search.html#inputbarcode';
+        location.href = 'index.html#inputbarcode';
     },
 
     gotoScanBarcode: function(){
-        location.href = 'search.html#scanbaarcode';
+        location.href = 'index.html#scanbaarcode';
     },
 
     gotoItemDetail: function(){
-        location.href = 'search.html#item_detail';
+        location.href = 'index.html#item_detail';
     },
 
     getItem: function(){
@@ -92,6 +92,7 @@ var app = {
     },
 
     scan: function() {
+        location.href = 'index.html#select';
         console.log('scanning');
         
         var scanner = cordova.require("cordova/plugin/BarcodeScanner");
