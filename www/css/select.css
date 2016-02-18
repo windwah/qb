@@ -24,9 +24,9 @@
 .ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wrapper {
     background-image: url("../img/choice/png/marzoni_app_choice_V2_bg.png");
     background-repeat: no-repeat;
-    background-position: center top;
+    background-position: center center;
     background-attachment:fixed;
-    background-size:contain;
+    background-size:cover;
 }
 /* Portrait layout (default) */
 .app {
