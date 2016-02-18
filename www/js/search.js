@@ -99,6 +99,7 @@ var app = {
         scanner.scan( function (result) { 
 
             $('#txtSearch').val(result.text);
+            alert(result.cancelled);
             app.getItem();
 
         }, function (error) { 
