@@ -99,7 +99,7 @@ h1 {
     color: #FFF !important;
     text-shadow: 0 1px 0 #000 !important;
     border: 0 none;
-    padding: 24px;
+    padding: 4%;
 }
 
 .appLogo{
@@ -109,17 +109,17 @@ h1 {
 }
 
 .left_back {
-    width: 4%;
+    width: 3%;
     left: 30px;
     position: absolute;
-    top: 0px;
+    top: 5%;
 }
 
 .right_cam {
     position: absolute;
-    width: 12%;
+    width: 8%;
     right: 30px;
-    top:10px;
+    top:22%;
 }
 
 .right_keyboard {

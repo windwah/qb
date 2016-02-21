@@ -59,29 +59,11 @@
 
         </div><!-- /page -->
 
-        <div data-role="page" id="scanbaarcode">
-
-            <div data-role="header">
-                <img src="img/search/png/icon_back.png" class="left_back">
-                <img src="img/marzoni_logo.png" class="appLogo">
-                <img src="img/search/png/keyboard.png" class="right_keyboard">
-            </div><!-- /header -->
-
-            <div role="main" class="ui-content">
-                <div class="app" style="margin-top:20%">
-                    <img id="barcode" src="img/choice/png/barcode.png" style="width:100px" />
-                    <label for="text-basic">條碼掃描</label>
-                </div>
-            </div><!-- /content -->
-
-
-        </div><!-- /page -->
-
         <!-- Start of second page -->
         <div data-role="page" id="item_detail">
 
             <div data-role="header" class="brown">
-                <img src="img/search/png/icon_back.png" class="left_back" onclick="location.href='#inputbarcode'">
+                <img src="img/search/png/icon_back.png" class="left_back" onclick="location.href='#select'">
                 <img src="img/marzoni_logo.png" class="appLogo">
                 <img src="img/search/png/camera.png" class="right_cam">
             </div><!-- /header -->
@@ -109,9 +91,6 @@
                             </tr>
                             <tr>
                                 <td>參考：</td><td item-data="ref"></td>
-                            </tr>
-                            <tr>
-                                <td>地點：</td><td item-data="location"></td>
                             </tr>
                         </table>
                     </div>

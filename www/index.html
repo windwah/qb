@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8" />
@@ -7,113 +7,32 @@
         <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
         <link rel="stylesheet" href="js/jquery/jquery.mobile-1.4.5.min.css" />
+        <link rel="stylesheet" href="js/jquery.bxslider/jquery.bxslider.css" />
         <link rel="stylesheet" type="text/css" href="css/select.css" />
-        <link rel="stylesheet" type="text/css" href="css/ios.css" />        
+        <link rel="stylesheet" type="text/css" href="css/ios.css" />
         <title>Marzoni</title>
     </head>
     <body>
-        <div data-role="page" id="select">
-
-
-            <div role="main" class="ui-content" id="select_page">
-                <div class="app">
-                    <a href="#loginForm"><img id="appLogo" src="img/marzoni_logo.png"/></a>
-                </div>
-                <div class="ui-grid-a ui-responsive selectContent">
-                    <div class="ui-block-a">
-                        <div class="ui-body ui-body-d">
-                            <img id="barcode" src="img/choice/png/barcode.png"/><br>
-                            <label for="text-basic">條碼掃描</label>
-                            
-                        </div>
-                    </div>
-                    <div class="ui-block-b">
-                        <div class="ui-body ui-body-d">
-                            <img id="search" src="img/choice/png/search.png"/>
-                            <label for="text-basic">輸入產品編號</label>
-                        </div>
-                    </div>
-                </div><!-- /grid-a -->
-
-            </div><!-- /content -->
-            <div class="centerLine"></div>
+        <div data-role="page" id="tutorial" style="    background: #000 none repeat scroll 0 0;">
+            <ul class="bxslider">
+                <li><img src="img/tutorial/marzoni_tutorial_640x960-11.jpg" /></li>
+                <li><img src="img/tutorial/marzoni_tutorial_640x960-12.jpg" /></li>
+                <li><img src="img/tutorial/marzoni_tutorial_640x960-13.jpg" /></li>
+                <li><img src="img/tutorial/marzoni_tutorial_640x960-14.jpg" /></li>
+                <li><img src="img/tutorial/marzoni_tutorial_640x960-15.jpg" /></li>
+            </ul>
+            
+            <span href="search.html" class="btn-skip">跳過</span>
         </div><!-- /page -->
-
-        <div data-role="page" id="inputbarcode">
-
-            <div data-role="header">
-                <img src="img/search/png/icon_back.png" class="left_back">
-                <img src="img/marzoni_logo.png" class="appLogo">
-                <img src="img/search/png/camera.png" class="right_cam">
-            </div><!-- /header -->
-
-            <div role="main" class="ui-content">
-                <div class="app" style="margin-top:20%">
-                    <img id="search" src="img/choice/png/search.png" style="width:100px" />
-                    <label for="text-basic">輸入產品編號</label>
-                    <input type="text" name="txtSearch" id="txtSearch" value="">
-                    <a href="#item_detail" class="ui-btn ui-btn-inline ui-icon-delete" id="btnSearch">搜尋</a>
-                </div>
-            </div><!-- /content -->
-
-
-        </div><!-- /page -->
-
-        <!-- Start of second page -->
-        <div data-role="page" id="item_detail">
-
-            <div data-role="header" class="brown">
-                <img src="img/search/png/icon_back.png" class="left_back" onclick="location.href='#inputbarcode'">
-                <img src="img/marzoni_logo.png" class="appLogo">
-                <img src="img/search/png/camera.png" class="right_cam">
-            </div><!-- /header -->
-
-            <div role="main" class="ui-content item_page">
-                <div id="item_found">
-                    <div class="item_image"></div>
-                    <div class="item_info">
-                        <div item-data="item_name" class="item_name"></div>
-                        <div item-data='qtyLv' class="stock_bar"></div>
-                    </div>
-                    <div class="item_data_detail">
-                        <table>
-                            <tr>
-                                <td>物料：</td><td item-data="material"></td>
-                            </tr>
-                            <tr>
-                                <td>尺碼：</td><td item-data="size"></td>
-                            </tr>
-                            <tr>
-                                <td>重量：</td><td item-data="weight"></td>
-                            </tr>
-                            <tr>
-                                <td>顏色：</td><td item-data="color"></td>
-                            </tr>
-                            <tr>
-                                <td>參考：</td><td item-data="ref"></td>
-                            </tr>
-                            <tr>
-                                <td>地點：</td><td item-data="location"></td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
-                <div id="item_not_found">
-                    <div class="item_image"></div>
-                    <p>找不到產品編號，請重新輸入。</p>   
-                </div>
-            </div><!-- /content -->
-
-            <div data-role="footer" class="brown">
-            </div><!-- /header -->
-        </div><!-- /page -->
-
-
+        
         <script src="js/jquery/jquery-1.12.0.min.js"></script>
         <script src="js/jquery/jquery.mobile-1.4.5.min.js"></script>
+        <script src="js/jquery.bxslider/jquery.bxslider.min.js"></script>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="barcodescanner.js"></script>
         <script type="text/javascript" src="js/marzoni.js"></script>
-        <script type="text/javascript" src="js/search.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        
+        
     </body>
 </html>

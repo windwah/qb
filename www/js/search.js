@@ -22,23 +22,23 @@ var app = {
     },
 
     onClick: function(){
-        location.href = 'index.html';
+        location.href = 'search.html';
     },
 
     gotoSelect: function(){
-        location.href = 'index.html#select';
+        location.href = 'search.html#select';
     },
 
     gotoInputBarcode: function(){
-        location.href = 'index.html#inputbarcode';
+        location.href = 'search.html#inputbarcode';
     },
 
     gotoScanBarcode: function(){
-        location.href = 'index.html#scanbaarcode';
+        location.href = 'search.html#scanbaarcode';
     },
 
     gotoItemDetail: function(){
-        location.href = 'index.html#item_detail';
+        location.href = 'search.html#item_detail';
     },
 
     getItem: function(){
@@ -71,8 +71,7 @@ var app = {
            $('[item-data="size"]').html(json.size);
            $('[item-data="weight"]').html(json.weight);
            $('[item-data="color"]').html(json.color.join("; "));
-           $('[item-data="ref"]').html(json.ref);
-           $('[item-data="location"]').html(json.location);
+           $('[item-data="ref"]').html(json.location);
             $('[item-data="qtyLv"]').removeClass('lv_red').removeClass('lv_yellow').removeClass('lv_green');
             if(json.qty < marzoni.minQty)
                 $('[item-data="qtyLv"]').addClass('lv_red');

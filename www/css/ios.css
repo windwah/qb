@@ -27,3 +27,38 @@ body {
     padding: 35px 0;
     width: 15%;
 }
+
+.bx-wrapper .bx-viewport {
+    background: transparent none repeat scroll 0 0;
+    border: 0px solid;
+    box-shadow: 0 0 0px #ccc;
+    left: 0px;
+}
+
+.bx-wrapper .bx-pager {
+    margin: 50px 0;
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a:hover, .bx-wrapper .bx-pager.bx-default-pager a.active {
+    background: #fff none repeat scroll 0 0;
+}
+
+.btn-skip{
+    border: 1px solid #fff;
+    color: #fff;
+    font-size: 2.5em;
+    font-weight: normal;
+    padding: 10px 30px;
+    text-shadow: 0 0 0 transparent;
+    margin: -30px auto;
+    position: relative;
+    display: table;
+}
+
+.bx-wrapper .btn-skip:hover, .bx-wrapper .btn-skip:link, .bx-wrapper .btn-skip:visited   {
+    color: #fff !important;
+}
+
+.bx-wrapper img {
+    width: 100%;
+}
