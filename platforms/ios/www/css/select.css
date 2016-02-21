@@ -1,0 +1,216 @@
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+
+.ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wrapper {
+    background-image: url("../img/choice/png/marzoni_app_choice_V2_bg.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment:fixed;
+    background-size:cover;
+}
+/* Portrait layout (default) */
+.app {
+    margin: 25% auto 0;
+    padding: 0;
+    text-align: center;
+    width: 60%;
+}
+
+.app label{
+    font-size: 2em;
+    font-weight: normal;
+    color: #fff;
+    text-shadow: 0 1px 0 #000;
+}
+
+.app img{
+    width: 100%;
+}
+/* Landscape layout (with min-width) */
+@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
+    .app {
+        background-position:left center;
+        padding:75px 0px 75px 170px;  /* padding-top + padding-bottom + text area = image height */
+        margin:-90px 0px 0px -198px;  /* offset vertical: half of image height */
+                                      /* offset horizontal: half of image width and text area width */
+
+    }
+}
+
+.selectContent {
+    border: 0 none;
+    padding: 20% 0;
+}
+
+.selectContent  img {
+    display: block;
+    margin: auto;
+    position: relative;
+    width: 50%;
+}
+
+.selectContent label{
+    text-align: center;
+    font-size: 1.5em;
+    color: #FFF;
+    text-shadow: 0 1px 0 #000;
+}
+h1 {
+    font-size:24px;
+    font-weight:normal;
+    margin:0px;
+    overflow:visible;
+    padding:0px;
+    text-align:center;
+}
+
+.centerLine {
+    background-color: #fff;
+    height: 50%;
+    left: 49%;
+    position: absolute;
+    top: 25%;
+    width: 2px;
+}
+
+.ui-header.ui-bar-inherit {
+    background: transparent none repeat scroll 0 0;
+    font-size: 30px !important;
+    color: #FFF !important;
+    text-shadow: 0 1px 0 #000 !important;
+    border: 0 none;
+    padding: 4%;
+}
+
+.appLogo{
+    display: block;
+    width: 40%;
+    margin: auto;
+}
+
+.left_back {
+    width: 3%;
+    left: 30px;
+    position: absolute;
+    top: 5%;
+}
+
+.right_cam {
+    position: absolute;
+    width: 8%;
+    right: 30px;
+    top:22%;
+}
+
+.right_keyboard {
+    width: 15%;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+}
+
+.ui-header.brown, .ui-footer.brown{
+    background-color: #4d2925;
+}
+
+.item_page {
+     background-image: url("../img/product_detail/product_bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: contain;
+    min-height: 500px;
+}
+
+.item_image {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 500px;
+    margin: auto;
+    width: 50%;
+    background-image: url("../img/no-image-thumb.png");
+}
+
+.item_info, .item_data_detail{
+    display: block;
+    float: left;
+    font-size: 24px;
+    width: 100%;
+}
+
+#item_detail{
+    background-image: none;
+    background-color: #FFF;
+}
+
+.item_name {
+    float: left;
+    font-size: 2em;
+    padding: 30px 0 50px;
+    text-align: left;
+    width: 80%;
+}
+
+#search_form{
+    background-image: url("../img/choice/png/marzoni_app_choice_V2_bg.png");
+}
+
+.ui-footer {
+    bottom: 0px;
+    min-height: 48px;
+    position: fixed;
+    width: 100%;
+    border: 0px solid;
+}
+
+.lv_green {
+    background-image: url("../img/product_detail/png/stock_bar_green.png");
+}
+
+.lv_red {
+    background-image: url("../img/product_detail/png/stock_bar_red.png");
+}
+
+.lv_yellow {
+    background-image: url("../img/product_detail/png/stock_bar_yellow.png");
+}
+
+.stock_bar {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    float: right;
+    height: 10px;
+    margin-right: 20px;
+    padding: 40px 0;
+    width: 100px;
+}
+
+.ui-grid-a > .ui-block-a, .ui-grid-a > .ui-block-b {
+    width: 50%;
+    float:left;
+}
+
+#txtSearch{
+    font-size:3em;
+}
