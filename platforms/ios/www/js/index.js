@@ -4,7 +4,6 @@ $( document ).ready(function() {
       captions: false,
       infiniteLoop: false,
       hideControlOnEnd: true,
-      preloadImages: 'all',
       touchEnabled:true,
       preventDefaultSwipeY:true
     });

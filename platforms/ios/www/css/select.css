@@ -44,7 +44,7 @@
 }
 
 .app img{
-    width: 100%;
+    width: 50%;
 }
 /* Landscape layout (with min-width) */
 @media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
