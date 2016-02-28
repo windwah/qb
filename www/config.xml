@@ -109,6 +109,7 @@
 
     <!-- Define app splash screen for each platform. -->
     <preference name="SplashScreen" value="screen"/>
+    <gap:splash src="splash.png" />
     <splash src="ldpi.png" platform="android" qualifier="ldpi" />
     <splash src="mdpi.png" platform="android" qualifier="mdpi" />
     <splash src="hdpi.png" platform="android" qualifier="hdpi" />
