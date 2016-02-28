@@ -59,7 +59,7 @@
 
 .selectContent {
     border: 0 none;
-    padding: 20% 0;
+    padding: 25% 0;
 }
 
 .selectContent  img {
@@ -99,7 +99,7 @@ h1 {
     color: #FFF !important;
     text-shadow: 0 1px 0 #000 !important;
     border: 0 none;
-    padding: 4%;
+    padding: 5%;
 }
 
 .appLogo{
@@ -112,14 +112,14 @@ h1 {
     width: 3%;
     left: 30px;
     position: absolute;
-    top: 5%;
+    top: 8%;
 }
 
 .right_cam {
     position: absolute;
     width: 8%;
     right: 30px;
-    top:22%;
+    top:24%;
 }
 
 .right_keyboard {
@@ -213,4 +213,8 @@ h1 {
 
 #txtSearch{
     font-size:3em;
+}
+
+.item_data_detail td {
+    vertical-align: top;
 }

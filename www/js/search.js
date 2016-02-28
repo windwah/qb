@@ -30,6 +30,7 @@ var app = {
     },
 
     gotoInputBarcode: function(){
+        $('#txtSearch').val('');
         location.href = 'search.html#inputbarcode';
     },
 
@@ -91,20 +92,17 @@ var app = {
     },
 
     scan: function() {
-        console.log('scanning');
-        
-        var scanner = cordova.require("cordova/plugin/BarcodeScanner");
-
-        scanner.scan( function (result) { 
-
-            if(!result.cancelled){
-                $('#txtSearch').val(result.text);
-                app.getItem();
-            }
-
-        }, function (error) { 
-            console.log("Scanning failed: ", error); 
-        } );
+        cordova.plugins.barcodeScanner.scan(
+          function (result) {
+              if(!result.cancelled){
+                  $('#txtSearch').val(result.text);
+                  app.getItem();
+              }
+          }, 
+          function (error) {
+              alert("Scanning failed: " + error);
+          }
+       );
     },
 
     encode: function() {

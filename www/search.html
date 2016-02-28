@@ -20,19 +20,24 @@
                     <a href="#loginForm"><img id="appLogo" src="img/marzoni_logo.png"/></a>
                 </div>
                 <div class="ui-grid-a ui-responsive selectContent">
-                    <div class="ui-block-a">
-                        <div class="ui-body ui-body-d">
-                            <img id="barcode" src="img/choice/png/barcode.png"/><br>
-                            <label for="text-basic">條碼掃描</label>
+                    <table>
+                        <tr>
+                            <td width=50%>
+                            <img id="barcode" src="img/choice/png/barcode.png"/>
                             
-                        </div>
-                    </div>
-                    <div class="ui-block-b">
-                        <div class="ui-body ui-body-d">
+                            </td>
+                            <td  width=50%>
                             <img id="search" src="img/choice/png/search.png"/>
-                            <label for="text-basic">輸入產品編號</label>
-                        </div>
-                    </div>
+                            
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="text-basic">條碼掃描</label>
+                            </td>
+                            <td><label for="text-basic">輸入產品編號</label>
+                            </td>
+                        </tr>
+                    </table>
                 </div><!-- /grid-a -->
 
             </div><!-- /content -->
@@ -78,7 +83,7 @@
                     <div class="item_data_detail">
                         <table>
                             <tr>
-                                <td>物料：</td><td item-data="material"></td>
+                                <td  width=12%>物料：</td><td item-data="material"></td>
                             </tr>
                             <tr>
                                 <td>尺碼：</td><td item-data="size"></td>
@@ -109,7 +114,6 @@
         <script src="js/jquery/jquery-1.12.0.min.js"></script>
         <script src="js/jquery/jquery.mobile-1.4.5.min.js"></script>
         <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="barcodescanner.js"></script>
         <script type="text/javascript" src="js/marzoni.js"></script>
         <script type="text/javascript" src="js/search.js"></script>
     </body>
