@@ -61,7 +61,7 @@
     -->
 
     <!-- Plugins -->
-    <gap:plugin name="cordova-plugin-barcodescanner" source="npm" />
+    <gap:plugin name="cordova-plugin-barcodescanner" spec="https://github.com/Dbuggerx/BarcodeScanner.git" source="git" />
 
     <!-- Core plugins -->
     <gap:plugin name="org.apache.cordova.battery-status" />
