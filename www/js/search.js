@@ -14,10 +14,11 @@ var app = {
         $('#search').on('click', this.gotoInputBarcode);
         $('#btnSearch').on('click',this.getItem);
         $('#inputbarcode .left_back').on('click', this.gotoSelect);
+        $('#item_detail .left_back').on('click', this.gotoSelect);
         $('.right_cam').on('click', this.scan);
         $('#barcode').on('click', this.scan);
         $('.right_keyboard').on('click', this.gotoInputBarcode);
-        $('.item_image').height(_H*0.35);
+        $('.item_image').height(_H*0.38);
         
     },
 
@@ -105,19 +106,9 @@ var app = {
        );
     },
 
-    encode: function() {
-        var scanner = cordova.require("cordova/plugin/BarcodeScanner");
-
-        scanner.encode(scanner.Encode.TEXT_TYPE, "http://www.nhl.com", function(success) {
-            alert("encode success: " + success);
-          }, function(fail) {
-            alert("encoding failed: " + fail);
-          }
-        );
-
-    }
 };
 
 $( document ).ready(function() {
     app.initialize();
+    $.mobile.linkBindingEnabled = false;
 });

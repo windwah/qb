@@ -71,7 +71,7 @@
 
 .selectContent label{
     text-align: center;
-    font-size: 1.5em;
+    font-size: 2em;
     color: #FFF;
     text-shadow: 0 1px 0 #000;
 }
@@ -99,7 +99,7 @@ h1 {
     color: #FFF !important;
     text-shadow: 0 1px 0 #000 !important;
     border: 0 none;
-    padding: 5%;
+    padding: 6% 5% 4%;
 }
 
 .appLogo{
@@ -109,17 +109,17 @@ h1 {
 }
 
 .left_back {
-    width: 3%;
+    width: 4%;
     left: 30px;
     position: absolute;
-    top: 8%;
+    top: 14%;
 }
 
 .right_cam {
     position: absolute;
     width: 8%;
     right: 30px;
-    top:24%;
+    top:35%;
 }
 
 .right_keyboard {
@@ -134,11 +134,15 @@ h1 {
 }
 
 .item_page {
-     background-image: url("../img/product_detail/product_bg.jpg");
-    background-repeat: no-repeat;
-    background-position: center top;
-    background-size: contain;
+    padding: 0px;
     min-height: 500px;
+}
+
+.ui-content.item_page > div {
+    background-image: url("../img/product_detail/product_bg.jpg");
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .item_image {
@@ -155,7 +159,8 @@ h1 {
     display: block;
     float: left;
     font-size: 24px;
-    width: 100%;
+    width: 96%;
+    margin: 2%;
 }
 
 #item_detail{

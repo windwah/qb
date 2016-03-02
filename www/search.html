@@ -68,7 +68,7 @@
         <div data-role="page" id="item_detail">
 
             <div data-role="header" class="brown">
-                <img src="img/search/png/icon_back.png" class="left_back" onclick="location.href='#select'">
+                <img src="img/search/png/icon_back.png" class="left_back">
                 <img src="img/marzoni_logo.png" class="appLogo">
                 <img src="img/search/png/camera.png" class="right_cam">
             </div><!-- /header -->
@@ -81,7 +81,7 @@
                         <div item-data='qtyLv' class="stock_bar"></div>
                     </div>
                     <div class="item_data_detail">
-                        <table style="width:100%">
+                        <table width=100%>
                             <tr>
                                 <td  width=12%>物料：</td><td item-data="material"></td>
                             </tr>
@@ -102,7 +102,9 @@
                 </div>
                 <div id="item_not_found">
                     <div class="item_image"></div>
-                    <p>找不到產品編號，請重新輸入。</p>   
+                    <div class="item_info">
+                        <p>找不到產品編號，請重新輸入。</p>   
+                    </div>
                 </div>
             </div><!-- /content -->
 
