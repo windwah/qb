@@ -42,6 +42,8 @@
 
             </div><!-- /content -->
             <div class="centerLine"></div>
+            <div data-role="footer" class="local" style="background-color: transparent;"><span>中文</span>｜<span>ENG</span>｜<span>IT</span>
+            </div><!-- /header -->
         </div><!-- /page -->
 
         <div data-role="page" id="inputbarcode">
@@ -83,23 +85,32 @@
                     <div class="item_data_detail">
                         <table width=100%>
                             <tr>
-                                <td  width=12%>物料：</td><td item-data="material"></td>
+                                <td width="12%">成份：</td><td item-data="composition"></td>
                             </tr>
                             <tr>
-                                <td>尺碼：</td><td item-data="size"></td>
+                                <td>幅寬：</td><td item-data="width"></td>
                             </tr>
                             <tr>
-                                <td>重量：</td><td item-data="weight"></td>
+                                <td>克重：</td><td item-data="weight"></td>
                             </tr>
                             <tr>
-                                <td>顏色：</td><td item-data="color"></td>
+                                <td>顏色：</td><td item-data="colour"></td>
                             </tr>
                             <tr>
-                                <td>參考：</td><td item-data="ref"></td>
+                                <td>花型：</td><td item-data="style"></td>
+                            </tr>
+                            <tr>
+                                <td>位置：</td><td item-data="location"></td>
                             </tr>
                         </table>
                     </div>
                 </div>
+                <div id='item_icon' class="item_icon_container">
+                    <img src="img/suit.png" item-data="suit"/ >
+                    <img src="img/telfon.png" item-data="telfon"/ >
+                    <img src="img/stretch-icon.png" item-data="stretch"/ >
+                    <img src="img/no-pants-day.png" item-data="no-pants"/ >
+                </div> 
                 <div id="item_not_found">
                     <div class="item_image"></div>
                     <div class="item_info">

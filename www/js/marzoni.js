@@ -4,5 +4,5 @@ var marzoni = {
 	serverUrl: "http://58.64.129.183/",
 	minQty:10,
 	avgQty:50,
-	marzoni_version: '1.0.5'
+	marzoni_version: '1.0.6'
 }
