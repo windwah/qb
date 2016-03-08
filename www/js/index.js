@@ -1,4 +1,7 @@
 $( document ).ready(function() {
+  if(!localStorage.getItem('lang')){
+     localStorage.setItem('lang','cn');
+  }
   if(localStorage.getItem('marzoni_version') == marzoni.marzoni_version){
     gotoSearch();
     return;

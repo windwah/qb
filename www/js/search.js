@@ -19,8 +19,21 @@ var app = {
         $('#barcode').on('click', this.scan);
         $('.right_keyboard').on('click', this.gotoInputBarcode);
         $('.item_image').height(_H*0.38);
-        
+        $('.bxslider').height(_H*0.38);
+        $('.btn-lang').on('click', this.changeLang);
+        slider = $('.bxslider').bxSlider({
+          mode: 'horizontal',
+          captions: false,
+          infiniteLoop: false,
+          hideControlOnEnd: true,
+          touchEnabled:true,
+          preventDefaultSwipeY:true
+        }); 
+        var lang = localStorage.getItem('lang');
+        chaneLanguage(lang,refreshLang );  
+        $('.btn-lang[item-data="'+lang+'"]').addClass('hl');
     },
+
 
     onClick: function(){
         location.href = 'search.html';
@@ -43,9 +56,16 @@ var app = {
         location.href = 'search.html#item_detail';
     },
 
+    changeLang: function (e){
+      $('.btn-lang').removeClass('hl');
+      $(e.target).addClass('hl');
+      var lang = $(e.target).attr('item-data');
+      chaneLanguage(lang,refreshLang );
+    },
+
     getItem: function(){
         var data = {i: $('#txtSearch').val()};
-        var url = marzoni.serverUrl + 'qbservice/get_item.php';
+        var url = marzoni.serverUrl + '/qbservice/get_item.php';
 
         $.ajax({
           dataType: "json",
@@ -67,6 +87,7 @@ var app = {
         $('#item_not_found').hide();
         $('#item_icon img').hide();
         if(!json['error']){
+            $('.bxslider').show();
            $('[item-data="item_number"]').html(json.item_number);
            $('[item-data="item_name"]').html(json.full_name);
            $('[item-data="pd_name"]').html(json.pd_name);
@@ -86,17 +107,25 @@ var app = {
             if(json.images.length == 0){
               $('.item_image').css("background-image",'url("img/no-image-thumb.png"');
             }else{
-              $('.item_image').css("background-image",'url("'+ marzoni.serverUrl+json.images[0]);
+              $('.item_image').css("background-image",'none');
+              //$('.item_image .bxslider').html("");
+              $('.bxslider').append('<li><img src="' + marzoni.serverUrl+json.images[0] +'" /></li>');
+              $('.bxslider').append('<li><img src="' + marzoni.serverUrl+json.images[0] +'" /></li>');
+ //             $('.item_image .bxslider').append('<li><img src="' + marzoni.serverUrl+json.images[0] +'" /></li>');
+//              $('.item_image').css("background-image",'url("'+ marzoni.serverUrl+json.images[0
+              
             }
 
-           $('#item_found').show();
+           $('#item_found').show(function(){
+              slider.reloadSlider();
+           });
 
            $.each(json.function, function(key, value){
                $('[item-data="'+value+'"]').show();
            });
         }else{
            $('#item_not_found').show();
-
+          $('.bxslider').hide();
         }
         app.gotoItemDetail();
     },
@@ -121,3 +150,9 @@ $( document ).ready(function() {
     app.initialize();
     $.mobile.linkBindingEnabled = false;
 });
+
+function refreshLang(){
+  $.each(langWord, function(key, value){
+    $('[item-label="'+key+'"]').text(value);
+  });
+}

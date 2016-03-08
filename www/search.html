@@ -7,6 +7,7 @@
         <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
         <link rel="stylesheet" href="js/jquery/jquery.mobile-1.4.5.min.css" />
+        <link rel="stylesheet" href="js/jquery.bxslider/jquery.bxslider.css" />
         <link rel="stylesheet" type="text/css" href="css/select.css" />
         <link rel="stylesheet" type="text/css" href="css/ios.css" />        
         <title>Marzoni</title>
@@ -42,7 +43,7 @@
 
             </div><!-- /content -->
             <div class="centerLine"></div>
-            <div data-role="footer" class="local" style="background-color: transparent;"><span>中文</span>｜<span>ENG</span>｜<span>IT</span>
+            <div data-role="footer" class="local" style="background-color: transparent;"><span class="btn-lang" item-data="cn">中文</span>｜<span class="btn-lang" item-data="en">ENG</span>｜<span class="btn-lang" item-data="it">IT</span>
             </div><!-- /header -->
         </div><!-- /page -->
 
@@ -66,6 +67,7 @@
 
         </div><!-- /page -->
 
+
         <!-- Start of second page -->
         <div data-role="page" id="item_detail">
 
@@ -77,7 +79,10 @@
 
             <div role="main" class="ui-content item_page">
                 <div id="item_found">
-                    <div class="item_image"></div>
+                    <div class="item_image">
+            <ul class="bxslider">
+            </ul>
+                    </div>
                     <div class="item_info">
                         <div item-data="item_name" class="item_name"></div>
                         <div item-data='qtyLv' class="stock_bar"></div>
@@ -85,22 +90,22 @@
                     <div class="item_data_detail">
                         <table width=100%>
                             <tr>
-                                <td width="12%">成份：</td><td item-data="composition"></td>
+                                <td width="12%" item-label="composition">成份</td><td>：</td><td item-data="composition"></td>
                             </tr>
                             <tr>
-                                <td>幅寬：</td><td item-data="width"></td>
+                                <td item-label="width">幅寬</td><td>：</td><td item-data="width"></td>
                             </tr>
                             <tr>
-                                <td>克重：</td><td item-data="weight"></td>
+                                <td item-label="weight">克重</td><td>：</td><td item-data="weight"></td>
                             </tr>
                             <tr>
-                                <td>顏色：</td><td item-data="colour"></td>
+                                <td item-label="colour">顏色</td><td>：</td><td item-data="colour"></td>
                             </tr>
                             <tr>
-                                <td>花型：</td><td item-data="style"></td>
+                                <td item-label="style">花型</td><td>：</td><td item-data="style"></td>
                             </tr>
                             <tr>
-                                <td>位置：</td><td item-data="location"></td>
+                                <td item-label="location">位置</td><td>：</td><td item-data="location"></td>
                             </tr>
                         </table>
                     </div>
@@ -119,13 +124,12 @@
                 </div>
             </div><!-- /content -->
 
-            <div data-role="footer" class="brown"><span>V1.0.5</span>
+            <div data-role="footer" class="brown"><span>V1.0.6</span>
             </div><!-- /header -->
         </div><!-- /page -->
-
-
         <script src="js/jquery/jquery-1.12.0.min.js"></script>
         <script src="js/jquery/jquery.mobile-1.4.5.min.js"></script>
+        <script src="js/jquery.bxslider/jquery.bxslider.min.js"></script>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/marzoni.js"></script>
         <script type="text/javascript" src="js/search.js"></script>
