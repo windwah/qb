@@ -178,6 +178,10 @@ h1 {
     margin: 1%;
 }
 
+.item_data_detail{
+    padding-bottom: 10%;
+}
+
 #item_detail{
     background-image: none;
     background-color: #FFF;
