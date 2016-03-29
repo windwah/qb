@@ -86,6 +86,7 @@ var app = {
         $('#item_found').hide();
         $('#item_not_found').hide();
         $('#item_icon img').hide();
+        $('[item-data="outofstock"]').hide();
         if(!json['error']){
             $('.bxslider').show();
            $('[item-data="item_number"]').html(json.item_number);
@@ -94,11 +95,15 @@ var app = {
            $('[item-data="composition"]').html(json.composition.join("<br>"));
            $('[item-data="width"]').html(json.width);
            $('[item-data="weight"]').html(json.weight);
-           $('[item-data="colour"]').html(json.colour.join("<br>"));
-           $('[item-data="style"]').html(json.style.join("<br>"));
-           $('[item-data="location"]').html(json.location);
+           $('[item-data="colour"]').html(refreshStrLang(json.colour.join("<br>")));
+           $('[item-data="style"]').html(refreshStrLang(json.style.join("<br>")));
+           $('[item-data="location"]').html(json.location.join("<br>"));
             $('[item-data="qtyLv"]').removeClass('lv_red').removeClass('lv_yellow').removeClass('lv_green');
-            if(json.qty < marzoni.minQty)
+
+            if(json.qty == 0){
+              $('[item-data="qtyLv"]').addClass('lv_red');
+              $('[item-data="outofstock"]').show();
+            }else if(json.qty < marzoni.minQty)
                 $('[item-data="qtyLv"]').addClass('lv_red');
             else if( json.qty < marzoni.avgQty )
                 $('[item-data="qtyLv"]').addClass('lv_yellow');
@@ -108,12 +113,8 @@ var app = {
               $('.item_image').css("background-image",'url("img/no-image-thumb.png"');
             }else{
               $('.item_image').css("background-image",'none');
-              //$('.item_image .bxslider').html("");
               $('.bxslider').append('<li><img src="' + marzoni.serverUrl+json.images[0] +'" /></li>');
-              $('.bxslider').append('<li><img src="' + marzoni.serverUrl+json.images[0] +'" /></li>');
- //             $('.item_image .bxslider').append('<li><img src="' + marzoni.serverUrl+json.images[0] +'" /></li>');
-//              $('.item_image').css("background-image",'url("'+ marzoni.serverUrl+json.images[0
-              
+              $('.bxslider').append('<li><img src="' + marzoni.serverUrl+json.images[0] +'" /></li>');              
             }
 
            $('#item_found').show(function(){
@@ -155,4 +156,11 @@ function refreshLang(){
   $.each(langWord, function(key, value){
     $('[item-label="'+key+'"]').text(value);
   });
+}
+
+function refreshStrLang(str){
+  $.each(langWord, function(key, value){
+    str = str.replace(key, value);
+  });
+  return str;
 }

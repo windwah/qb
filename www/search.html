@@ -33,9 +33,9 @@
                             </td>
                         </tr>
                         <tr>
-                            <td><label for="text-basic">條碼掃描</label>
+                            <td><label for="text-basic"item-label="Scan">條碼掃描</label>
                             </td>
-                            <td><label for="text-basic">輸入產品編號</label>
+                            <td><label for="text-basic"item-label="Input">輸入產品編號</label>
                             </td>
                         </tr>
                     </table>
@@ -58,7 +58,7 @@
             <div role="main" class="ui-content">
                 <div class="app" style="margin-top:20%">
                     <img id="search" src="img/choice/png/search.png" style="width:100px" />
-                    <label for="text-basic">輸入產品編號</label>
+                    <label for="text-basic" item-label="Input_Product_No">輸入產品編號</label>
                     <input type="text" name="txtSearch" id="txtSearch" value="">
                     <a href="#item_detail" class="ui-btn ui-btn-inline ui-icon-delete" id="btnSearch">搜尋</a>
                 </div>
@@ -86,6 +86,7 @@
                     <div class="item_info">
                         <div item-data="item_name" class="item_name"></div>
                         <div item-data='qtyLv' class="stock_bar"></div>
+                        <br><span item-data="outofstock" class="outofstock">OUT OF STOCK</span>
                     </div>
                     <div class="item_data_detail">
                         <table width=100%>
@@ -119,12 +120,12 @@
                 <div id="item_not_found">
                     <div class="item_image"></div>
                     <div class="item_info">
-                        <p>找不到產品編號，請重新輸入。</p>   
+                        <p item-label="Err_No_Product">找不到產品編號，請重新輸入。</p>   
                     </div>
                 </div>
             </div><!-- /content -->
 
-            <div data-role="footer" class="brown"><span>V1.0.7</span>
+            <div data-role="footer" class="brown"><span>V1.1.1</span>
             </div><!-- /header -->
         </div><!-- /page -->
         <script src="js/jquery/jquery-1.12.0.min.js"></script>

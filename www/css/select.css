@@ -265,3 +265,8 @@ ul.bxslider{
     color: #333;
     padding: 5px 8px 3px;
 }
+
+.outofstock {
+    color: red;
+    font-size: 0.8em;
+}
