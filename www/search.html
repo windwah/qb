@@ -5,43 +5,64 @@
         <meta name="format-detection" content="telephone=no" />
         <meta name="msapplication-tap-highlight" content="no" />
         <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=medium-dpi" />
         <link rel="stylesheet" href="js/jquery/jquery.mobile-1.4.5.min.css" />
+        <link rel="stylesheet" href="js/jquery.bxslider/jquery.bxslider.css" />
         <link rel="stylesheet" type="text/css" href="css/select.css" />
         <link rel="stylesheet" type="text/css" href="css/ios.css" />        
         <title>Marzoni</title>
     </head>
     <body>
         <div data-role="page" id="select">
-
+            <div data-role="header" class="brown">
+                <img src="img/search/png/icon_back.png" class="left_back">
+                <img src="img/marzoni_logo.png" class="appLogo">
+            </div><!-- /header -->
 
             <div role="main" class="ui-content" id="select_page">
-                <div class="app">
-                    <a href="#loginForm"><img id="appLogo" src="img/marzoni_logo.png"/></a>
-                </div>
                 <div class="ui-grid-a ui-responsive selectContent">
-                    <div class="ui-block-a">
-                        <div class="ui-body ui-body-d">
-                            <img id="barcode" src="img/choice/png/barcode.png"/><br>
-                            <label for="text-basic">條碼掃描</label>
+                    <table>
+                        <tr>
+                            <td width=50%>
+                            <img id="barcode" src="img/choice/png/barcode.png"/>
                             
-                        </div>
-                    </div>
-                    <div class="ui-block-b">
-                        <div class="ui-body ui-body-d">
+                            </td>
+                            <td  width=50%>
                             <img id="search" src="img/choice/png/search.png"/>
-                            <label for="text-basic">輸入產品編號</label>
-                        </div>
-                    </div>
+                            
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="text-basic" item-label="Scan">條碼掃描</label>
+                            </td>
+                            <td><label for="text-basic" item-label="Input">輸入產品編號</label>
+                            </td>
+                        </tr>
+                    </table>
+                    <table style="margin-top:15%">
+                        <tr>
+							<td width=25%></td>
+                            <td width=50%>
+								<img id="book" src="img/choice/png/book.png"/>
+                            </td>
+							<td width=25%></td>
+                        </tr>
+                        <tr>
+                            <td colspan=3 style="padding:0px 10%">
+								<label for="text-basic" item-label="book">Bunch / Lockbook Summary</label>
+                            </td>
+                        </tr>
+                    </table>
                 </div><!-- /grid-a -->
-
             </div><!-- /content -->
-            <div class="centerLine"></div>
+            <div data-role="footer" class="local brown"><!-- Footer -->
+				<span class="btn-lang" item-data="en">ENG</span>｜<span class="btn-lang" item-data="cn">中文</span>｜<span class="btn-lang" item-data="it">IT</span>
+            </div><!-- /Footer -->
         </div><!-- /page -->
 
         <div data-role="page" id="inputbarcode">
 
-            <div data-role="header">
+            <div data-role="header"  class="brown">
                 <img src="img/search/png/icon_back.png" class="left_back">
                 <img src="img/marzoni_logo.png" class="appLogo">
                 <img src="img/search/png/camera.png" class="right_cam">
@@ -50,66 +71,140 @@
             <div role="main" class="ui-content">
                 <div class="app" style="margin-top:20%">
                     <img id="search" src="img/choice/png/search.png" style="width:100px" />
-                    <label for="text-basic">輸入產品編號</label>
+                    <label for="text-basic" item-label="Input_Product_No">輸入產品編號</label>
                     <input type="text" name="txtSearch" id="txtSearch" value="">
                     <a href="#item_detail" class="ui-btn ui-btn-inline ui-icon-delete" id="btnSearch">搜尋</a>
                 </div>
             </div><!-- /content -->
+            <div data-role="footer" class="local brown"><!-- Footer -->
+				<p id="input_barcode_desc" class="footer_dsecription">Can type in LookBook Number, Example : F1 <br>
+				Can Type in Bunch Book Number, Example: 461 <br>
+				Can type in Fabric Number, Example: 603205 or 03205 or 90143</p>
 
-
+            </div><!-- /Footer -->
         </div><!-- /page -->
+
 
         <!-- Start of second page -->
         <div data-role="page" id="item_detail">
 
             <div data-role="header" class="brown">
-                <img src="img/search/png/icon_back.png" class="left_back" onclick="location.href='#select'">
+                <img src="img/search/png/icon_back.png" class="left_back">
                 <img src="img/marzoni_logo.png" class="appLogo">
                 <img src="img/search/png/camera.png" class="right_cam">
             </div><!-- /header -->
 
             <div role="main" class="ui-content item_page">
                 <div id="item_found">
-                    <div class="item_image"></div>
+                    <div class="item_image">
+				<ul class="bxslider">
+				</ul>
+                    </div>
                     <div class="item_info">
                         <div item-data="item_name" class="item_name"></div>
                         <div item-data='qtyLv' class="stock_bar"></div>
+                        <br><span item-data="outofstock" class="outofstock">OUT OF STOCK</span>
                     </div>
                     <div class="item_data_detail">
-                        <table>
+                        <table width=100%>
                             <tr>
-                                <td>物料：</td><td item-data="material"></td>
+                                <td width="12%" item-label="composition">成份</td><td>：</td><td item-data="composition"></td>
                             </tr>
                             <tr>
-                                <td>尺碼：</td><td item-data="size"></td>
+                                <td item-label="width">幅寬</td><td>：</td><td item-data="width"></td>
                             </tr>
                             <tr>
-                                <td>重量：</td><td item-data="weight"></td>
+                                <td item-label="weight">克重</td><td>：</td><td item-data="weight"></td>
                             </tr>
                             <tr>
-                                <td>顏色：</td><td item-data="color"></td>
+                                <td item-label="colour">顏色</td><td>：</td><td item-data="colour"></td>
                             </tr>
                             <tr>
-                                <td>參考：</td><td item-data="ref"></td>
+                                <td item-label="style">花型</td><td>：</td><td item-data="style"></td>
+                            </tr>
+                            <tr>
+                                <td item-label="location">位置</td><td>：</td><td item-data="location"></td>
                             </tr>
                         </table>
                     </div>
                 </div>
+                <div id='item_icon' class="item_icon_container">
+                    <img src="img/suit.png" item-data="suit"/ >
+                    <img src="img/telfon.png" item-data="telfon"/ >
+                    <img src="img/stretch-icon.png" item-data="stretch"/ >
+                    <img src="img/no-pants-day.png" item-data="no-pants"/ >
+                </div> 
                 <div id="item_not_found">
                     <div class="item_image"></div>
-                    <p>找不到產品編號，請重新輸入。</p>   
+                    <div class="item_info">
+                        <p item-label="Err_No_Product">找不到產品編號，請重新輸入。</p>   
+                    </div>
                 </div>
             </div><!-- /content -->
 
             <div data-role="footer" class="brown">
+				<table width="100%" class="footer_note">
+					<tr>
+						<td width="30%"><img src="img/product_detail/out.png" /></td>
+						<td width="40%"><img src="img/product_detail/t_out.png" /></td>
+						<td width="30%"><img src="img/product_detail/available.png" /></td>
+					</tr>
+				</table>
+				<span>V1.1.1</span>
+            </div><!-- /Footer -->
+		</div><!-- /page -->
+        <div data-role="page" id="input_book">
+
+            <div data-role="header"  class="brown">
+                <img src="img/search/png/icon_back.png" class="left_back">
+                <img src="img/marzoni_logo.png" class="appLogo">
+                <img src="img/search/png/camera.png" class="right_cam">
             </div><!-- /header -->
+
+            <div role="main" class="ui-content">
+                <div class="app" style="margin-top:20%">
+                    <img id="search" src="img/search/png/book_icon.png" style="width:100px" />
+                    <label for="text-basic" item-label="Input_book_No">輸入編號</label>
+                    <input type="text" name="txtBookSearch" id="txtBookSearch" value="">
+                    <a href="#book_result" class="ui-btn ui-btn-inline ui-icon-delete" id="btnBookSearch">搜尋</a>
+                </div>
+            </div><!-- /content -->
+            <div data-role="footer" class="local brown"><!-- Footer -->
+				<p id="input_barcode_desc" class="footer_dsecription">Can type in LookBook Number, Example : F1 <br>
+				Can Type in Bunch Book Number, Example: 461 <br>
+				Can type in Fabric Number, Example: 603205 or 03205 or 90143</p>
+
+            </div><!-- /Footer -->
         </div><!-- /page -->
+		
+       <!-- Start of second page -->
+        <div data-role="page" id="book_result">
 
+            <div data-role="header" class="brown">
+                <img src="img/search/png/icon_back.png" class="left_back">
+                <img src="img/marzoni_logo.png" class="appLogo">
+            </div><!-- /header -->
 
+            <div role="main" id="book_result_container" class="ui-content book_result_page">
+ 
+            </div><!-- /content -->
+
+            <div data-role="footer" class="brown">
+				<table width="100%" class="footer_note">
+					<tr>
+						<td width="30%"><img src="img/product_detail/out.png" /></td>
+						<td width="40%"><img src="img/product_detail/t_out.png" /></td>
+						<td width="30%"><img src="img/product_detail/available.png" /></td>
+					</tr>
+				</table>
+				<span>V1.1.1</span>
+            </div><!-- /Footer -->
+		</div><!-- /page -->
+		
         <script src="js/jquery/jquery-1.12.0.min.js"></script>
         <script src="js/jquery/jquery.mobile-1.4.5.min.js"></script>
+        <script src="js/jquery.bxslider/jquery.bxslider.min.js"></script>
         <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="barcodescanner.js"></script>
         <script type="text/javascript" src="js/marzoni.js"></script>
         <script type="text/javascript" src="js/search.js"></script>
     </body>
