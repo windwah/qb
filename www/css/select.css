@@ -99,7 +99,7 @@ h1 {
     color: #FFF !important;
     text-shadow: 0 1px 0 #000 !important;
     border: 0 none;
-    padding: 6% 5% 4%;
+    padding: 4% 5% 4%;
 }
 
 .appLogo{
@@ -109,17 +109,17 @@ h1 {
 }
 
 .left_back {
-    width: 4%;
-    left: 30px;
+    left: 5%;
     position: absolute;
-    top: 14%;
+    top: 15%;
+    width: 5%;
 }
 
 .right_cam {
     position: absolute;
     width: 8%;
-    right: 30px;
-    top:35%;
+    right: 8%;
+    top:30%;
 }
 
 .right_keyboard {
@@ -130,7 +130,7 @@ h1 {
 }
 
 .ui-header.brown, .ui-footer.brown{
-    background-color: #4d2925;
+    background-color: #eee6d8;
 }
 
 .item_page {
@@ -163,7 +163,6 @@ h1 {
     background-position: center center;
     background-repeat: no-repeat;
     background-size: contain;
-    height: 500px;
     margin: auto;
     width: 50%;
     background-image: url("../img/no-image-thumb.png");
@@ -248,7 +247,7 @@ ul.bxslider{
 }
 
 .local.ui-footer {
-    color: #fff;
+    color: #4d2925;
     font-size: 2em;
     font-weight: lighter;
     min-height: 0;
@@ -261,12 +260,35 @@ ul.bxslider{
 }
 
 .btn-lang.hl {
-    background-color: #fff;
-    color: #333;
+    background-color: #4d2925;
+    color: #fff;
     padding: 5px 8px 3px;
 }
 
 .outofstock {
     color: red;
     font-size: 0.8em;
+}
+
+.footer_dsecription {
+    font-size: 0.5em;
+    margin: 0;
+    text-transform: none;
+}
+
+.bx-wrapper {
+    margin: 0 auto 10px;
+}
+
+.footer_note td {
+    text-align: center;
+}
+
+#book_result{
+	background-image:none;
+}
+
+#book_result_container span {
+    font-size: 2em;
+    padding: 5px;
 }

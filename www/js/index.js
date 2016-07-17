@@ -1,6 +1,6 @@
 $( document ).ready(function() {
   if(!localStorage.getItem('lang')){
-     localStorage.setItem('lang','cn');
+     localStorage.setItem('lang','en');
   }
   if(localStorage.getItem('marzoni_version') == marzoni.marzoni_version){
     gotoSearch();
