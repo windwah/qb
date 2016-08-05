@@ -56,9 +56,9 @@
     <preference name="ErrorUrl" value="myErrorPage.html"/>
 
     <!--
-        Define a specific version of PhoneGap to build into your app.
+        Define a specific version of PhoneGap to build into your app. -->
         <preference name="phonegap-version"       value="3.5.0" />
-    -->
+    
 
     <!-- Plugins -->
     <gap:plugin name="cordova-plugin-barcodescanner" spec="https://github.com/Dbuggerx/BarcodeScanner.git" source="git" />
@@ -77,7 +77,7 @@
     <gap:plugin name="org.apache.cordova.file-transfer" />
     <gap:plugin name="org.apache.cordova.geolocation" />
     <gap:plugin name="cordova-plugin-globalization" />
-    <gap:plugin name="org.apache.cordova.inappbrowser" />
+    <gap:plugin name="cordova-plugin-inappbrowser" />
     <gap:plugin name="org.apache.cordova.media" />
     <gap:plugin name="org.apache.cordova.network-information" />
     <gap:plugin name="org.apache.cordova.splashscreen" />
