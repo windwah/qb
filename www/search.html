@@ -15,7 +15,6 @@
     <body>
         <div data-role="page" id="select">
             <div data-role="header" class="brown">
-                <img src="img/search/png/icon_back.png" class="left_back">
                 <img src="img/marzoni_logo.png" class="appLogo">
             </div><!-- /header -->
 
@@ -39,7 +38,7 @@
                             </td>
                         </tr>
                     </table>
-                    <table style="margin-top:15%">
+                    <table style="margin-top:15%;width:100%">
                         <tr>
 							<td width=25%></td>
                             <td width=50%>
@@ -88,22 +87,23 @@
         <!-- Start of second page -->
         <div data-role="page" id="item_detail">
 
-            <div data-role="header" class="brown">
+            <div data-role="header" class="brown fixed">
                 <img src="img/search/png/icon_back.png" class="left_back">
                 <img src="img/marzoni_logo.png" class="appLogo">
                 <img src="img/search/png/camera.png" class="right_cam">
             </div><!-- /header -->
 
-            <div role="main" class="ui-content item_page">
+            <div role="main" class="ui-content item_page fix-header">
                 <div id="item_found">
                     <div class="item_image">
-				<ul class="bxslider">
-				</ul>
+						<ul class="bxslider">
+						</ul>
                     </div>
                     <div class="item_info">
                         <div item-data="item_name" class="item_name"></div>
-                        <div item-data='qtyLv' class="stock_bar"></div>
-                        <br><span item-data="outofstock" class="outofstock">OUT OF STOCK</span>
+                        <div item-data='qtyLv' class="stock_bar">
+							<span item-data="outofstock" class="outofstock">OUT OF STOCK<br></span>
+						</div>
                     </div>
                     <div class="item_data_detail">
                         <table width=100%>
@@ -125,15 +125,19 @@
                             <tr>
                                 <td item-label="location">位置</td><td>：</td><td item-data="location"></td>
                             </tr>
+                            <tr>
+                                <td item-label="remarks">備注</td><td>：</td><td item-data="remarks"></td>
+                            </tr>
                         </table>
                     </div>
+					<div id='item_icon' class="item_icon_container">
+						<img src="img/suit.png" item-data="suit"/ >
+						<img src="img/telfon.png" item-data="telfon"/ >
+						<img src="img/stretch-icon.png" item-data="stretch"/ >
+						<img src="img/no-pants-day.png" item-data="no-pants"/ >
+					</div> 
                 </div>
-                <div id='item_icon' class="item_icon_container">
-                    <img src="img/suit.png" item-data="suit"/ >
-                    <img src="img/telfon.png" item-data="telfon"/ >
-                    <img src="img/stretch-icon.png" item-data="stretch"/ >
-                    <img src="img/no-pants-day.png" item-data="no-pants"/ >
-                </div> 
+
                 <div id="item_not_found">
                     <div class="item_image"></div>
                     <div class="item_info">
@@ -150,7 +154,6 @@
 						<td width="30%"><img src="img/product_detail/available.png" /></td>
 					</tr>
 				</table>
-				<span>V1.1.1</span>
             </div><!-- /Footer -->
 		</div><!-- /page -->
         <div data-role="page" id="input_book">
@@ -180,7 +183,7 @@
        <!-- Start of second page -->
         <div data-role="page" id="book_result">
 
-            <div data-role="header" class="brown">
+            <div data-role="header" class="brown fixed">
                 <img src="img/search/png/icon_back.png" class="left_back">
                 <img src="img/marzoni_logo.png" class="appLogo">
             </div><!-- /header -->
@@ -197,7 +200,6 @@
 						<td width="30%"><img src="img/product_detail/available.png" /></td>
 					</tr>
 				</table>
-				<span>V1.1.1</span>
             </div><!-- /Footer -->
 		</div><!-- /page -->
 		

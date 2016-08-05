@@ -4,7 +4,7 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "com.popbonet.marzoni"
-        version   = "1.2.1">
+        version   = "1.2.4">
 
     <name>Marzoni</name>
 
@@ -13,7 +13,7 @@
     </description>
 
     <author href="http://popbonet.com" email="windwahchan@gmail.com">
-        Wah Workshop
+        FungWah Workshop
     </author>
 
     <!-- Define the main entry-point to the application -->

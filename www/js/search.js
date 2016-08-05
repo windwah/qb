@@ -18,6 +18,7 @@ var app = {
         $('#inputbarcode .left_back').on('click', this.gotoSelect);
         $('#item_detail .left_back').on('click', this.gotoSelect);
         $('#book_result .left_back').on('click', this.gotoSelect);
+        $('#input_book .left_back').on('click', this.gotoSelect);
         $('.right_cam').on('click', this.scan);
         $('#barcode').on('click', this.scan);
         $('.right_keyboard').on('click', this.gotoInputBarcode);
@@ -111,9 +112,10 @@ var app = {
 			$('[item-data="colour"]').html(refreshStrLang(json.colour.join("<br>")));
 			$('[item-data="style"]').html(refreshStrLang(json.style.join("<br>")));
 			$('[item-data="location"]').html(json.location.join("<br>"));
+			$('[item-data="remarks"]').html(json.remarks.join("<br>"));
 			$('[item-data="qtyLv"]').removeClass('lv_red').removeClass('lv_yellow').removeClass('lv_green');
-
-            if(json.qty == 0){
+			
+            if(json.qty == 0 || !json.active ){
               $('[item-data="qtyLv"]').addClass('lv_red');
               $('[item-data="outofstock"]').show();
             }else if(json.qty < marzoni.minQty)
@@ -138,7 +140,7 @@ var app = {
            });
 
            $.each(json.function, function(key, value){
-               $('[item-data="'+value+'"]').show();
+               $('[item-data="'+value.toLowerCase()+'"]').show();
            });
         }else{
            $('#item_not_found').show();
@@ -172,7 +174,14 @@ var app = {
 		$.each(json, function(k,v){
 			var ccNode = $('<p><span>'+k+'<spna></p>');
 			$.each(v, function(cck, ccv){
-				ccNode.append('<span>'+ccv.itemCode+'<spna>');
+				var itNode = $('<span>'+ccv.itemCode+'<spna>');
+				if(ccv.qty < marzoni.minQty)
+					itNode.addClass('red');
+				else if( ccv.qty < marzoni.avgQty )
+					itNode.addClass('purple');
+				else
+					itNode.addClass('drakbrown');
+				ccNode.append(itNode);
 			});
 			cc.append(ccNode);
 		});
