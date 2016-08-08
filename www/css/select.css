@@ -147,7 +147,6 @@ h1 {
 
 .item_icon_container {
     background: transparent none repeat scroll 0 0;
-    margin-top: 15%;
     position: absolute;
     right: 1px;
     width: 40%;
@@ -298,15 +297,17 @@ ul.bxslider{
 
 .book_result_page, .ui-content.fix-header{
 	margin-top: 17%;
-	margin-bottom: 15%;
+	margin-bottom: 16%;
+	overflow: visible;
 }
+
 #book_result{
 	background-image:none;
 }
 
 #book_result_container span {
-    font-size: 2em;
-    padding: 5px;
+    font-size: 1.5em;
+    padding: 1%;
 }
 
 .ui-content {
@@ -336,4 +337,26 @@ ul.bxslider{
 }
 .drakbrown{
 	color: #6e3f34;
+}
+
+.bookTitle {
+    font-size: 4em;
+    padding-top: 2%;
+    text-align: center;
+    width: 100%;
+}
+
+.bookSearchContainer {
+    text-align: center;
+    list-style: outside none none;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.bookSearchContainer > p {
+	margin: 1% 5%;
+}
+
+.bookSearchContainer div {
+    display: table-cell;
 }

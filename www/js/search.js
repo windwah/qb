@@ -169,12 +169,14 @@ var app = {
     },
 	
 	refreshBookResult: function(json){
-		var cc = $('#book_result_container');
-		cc.html("");
+		var rdiv = $('#book_result_container');
+		var srhBook = $('#txtBookSearch').val();
+		rdiv.html('<div class="bookTitle">'+srhBook+'</div>');
+		cc = $('<ul class="bookSearchContainer"></ul>');
 		$.each(json, function(k,v){
-			var ccNode = $('<p><span>'+k+'<spna></p>');
+			var ccNode = $('<li><span>'+k+'&nbsp/<span></li>');
 			$.each(v, function(cck, ccv){
-				var itNode = $('<span>'+ccv.itemCode+'<spna>');
+				var itNode = $('<span>'+ccv.itemCode+'<span>');
 				if(ccv.qty < marzoni.minQty)
 					itNode.addClass('red');
 				else if( ccv.qty < marzoni.avgQty )
@@ -185,6 +187,7 @@ var app = {
 			});
 			cc.append(ccNode);
 		});
+		rdiv.append(cc);
         app.gotoBookResult();
     },
 	
