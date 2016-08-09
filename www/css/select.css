@@ -99,7 +99,7 @@ h1 {
     color: #FFF !important;
     text-shadow: 0 1px 0 #000 !important;
     border: 0 none;
-    padding: 4% 5% 4%;
+    padding: 6% 5% 3%;
 }
 
 .appLogo{
@@ -139,7 +139,6 @@ h1 {
 }
 
 .ui-content.item_page > div#item_found, .ui-content.item_page > div#item_not_found{
-    background-image: url("../img/product_detail/product_bg.jpg");
     background-position: center top;
     background-repeat: no-repeat;
     background-size: cover;

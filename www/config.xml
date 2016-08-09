@@ -4,7 +4,7 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "com.popbonet.marzoni"
-        version   = "1.2.5">
+        version   = "1.2.6">
 
     <name>Marzoni</name>
 
@@ -56,16 +56,16 @@
     <preference name="ErrorUrl" value="myErrorPage.html"/>
 
     <!--
-        Define a specific version of PhoneGap to build into your app. -->
+        Define a specific version of PhoneGap to build into your app.
         <preference name="phonegap-version"       value="3.7.0" />
-    
+    -->
 
     <!-- Plugins -->
-    <gap:plugin name="cordova-plugin-barcodescanner" />
+    <gap:plugin name="cordova-plugin-barcodescanner" spec="https://github.com/Dbuggerx/BarcodeScanner.git" source="git" />
 
     <!-- Core plugins -->
     <gap:plugin name="cordova-plugin-battery-status" />
-    <gap:plugin name="cordova-plugin-camera" />
+    <gap:plugin name="cordova-plugin-camera" spec="https://github.com/apache/cordova-plugin-camera" source="git" />
     <gap:plugin name="cordova-plugin-media-capture" />
     <gap:plugin name="cordova-plugin-console" />
     <gap:plugin name="cordova-plugin-contacts" />
@@ -77,7 +77,7 @@
     <gap:plugin name="cordova-plugin-file-transfer" />
     <gap:plugin name="cordova-plugin-geolocation" />
     <gap:plugin name="cordova-plugin-globalization" />
-    <gap:plugin name="cordova-plugin-inappbrowser"/>
+    <gap:plugin name="cordova-plugin-inappbrowser" spec="https://github.com/apache/cordova-plugin-inappbrowser" source="git" />
     <gap:plugin name="cordova-plugin-media" />
     <gap:plugin name="cordova-plugin-network-information" />
     <gap:plugin name="cordova-plugin-splashscreen" />
