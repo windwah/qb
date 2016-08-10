@@ -194,7 +194,6 @@ var app = {
     scan: function() {
         cordova.plugins.barcodeScanner.scan(
           function (result) {
-			  alert("OK");
               if(!result.cancelled){
                   $('#txtSearch').val(result.text);
                   app.getItem();
