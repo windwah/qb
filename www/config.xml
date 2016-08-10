@@ -131,7 +131,8 @@
         <icon src="res/ios/icon-50@2x.png" width="100" height="100" />
     </platform>
     <!-- Define app splash screen for each platform. -->
-    <preference name="SplashScreen" value="screen"/>
+	<preference name="SplashScreen" value="screen" />
+	<preference name="SplashScreenDelay" value="10000" />
     <gap:splash src="splash.png" platform="android"/>
     <splash src="ldpi.png" platform="android" qualifier="ldpi" />
     <splash src="mdpi.png" platform="android" qualifier="mdpi" />
@@ -159,7 +160,7 @@
     <!-- Retina iPad -->
     <splash src="Default-Portrait@2x.png" platform="ios" width="1536" height="2048" />
     <splash src="Default-Landscape@2x.png" platform="ios" width="2048" height="1536" />
-    <preference name="SplashScreenDelay" value="5000" />
+
     <!--
         Define access to external domains.
 
