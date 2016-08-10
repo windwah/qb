@@ -61,7 +61,7 @@
     -->
 
     <!-- Plugins -->
-    <gap:plugin name="cordova-plugin-barcodescanner" source="npm" />
+    <gap:plugin name="cordova-plugin-barcodescanner" />
 
     <!-- Core plugins -->
     <gap:plugin name="cordova-plugin-battery-status" />
