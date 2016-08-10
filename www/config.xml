@@ -61,7 +61,7 @@
     -->
 
     <!-- Plugins -->
-    <gap:plugin name="cordova-plugin-barcodescanner" />
+    <gap:plugin name="cordova-plugin-barcodescanner" spec="https://github.com/phonegap/phonegap-plugin-barcodescanner" source="git" />
 
     <!-- Core plugins -->
     <gap:plugin name="cordova-plugin-battery-status" />
