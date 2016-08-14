@@ -24,6 +24,7 @@ var app = {
         $('.right_keyboard').on('click', this.gotoInputBarcode);
         $('.item_image').width(_W);
         $('.bxslider').width(_W);
+		$('.bxslider').height(_W);
         $('.btn-lang').on('click', this.changeLang);
         slider = $('.bxslider').bxSlider({
           mode: 'horizontal',
