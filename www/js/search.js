@@ -24,7 +24,6 @@ var app = {
         $('.right_keyboard').on('click', this.gotoInputBarcode);
         $('.item_image').width(_W);
         $('.bxslider').width(_W);
-		$('.bxslider').height(_W);
         $('.btn-lang').on('click', this.changeLang);
         slider = $('.bxslider').bxSlider({
           mode: 'horizontal',
@@ -33,7 +32,7 @@ var app = {
           hideControlOnEnd: true,
           touchEnabled:true,
           preventDefaultSwipeY:true,
-		  adaptiveHeight: true
+
         }); 
 
         var lang = localStorage.getItem('lang');
@@ -99,6 +98,8 @@ var app = {
     },
 
     refreshItem: function(json){
+        var _H = $(document).height();
+        var _W = $(document).width();
         $('#item_found').hide();
         $('#item_not_found').hide();
         $('#item_icon img').hide();
@@ -138,6 +139,7 @@ var app = {
             }
 
            $('#item_found').show(function(){
+				$('.bxslider').height(_W);
               slider.reloadSlider();
            });
 
