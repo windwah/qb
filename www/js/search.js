@@ -184,7 +184,8 @@ var app = {
 		rdiv.html('<div class="bookTitle">'+srhBook+'</div>');
 		cc = $('<ul class="bookSearchContainer"></ul>');
 		$.each(json, function(k,v){
-			var ccNode = $('<li><span>'+k+'&nbsp/<span></li>');
+			var ccNode = $('<li><table><tr><td><span>'+k+'&nbsp/<span></td><td class="book"></td></tr></table></li>');
+			var ddNode = ccNode.find('.book');
 			$.each(v, function(cck, ccv){
 				var itNode = $('<span>'+ccv.itemCode+'<span>');
 				if(ccv.qty < marzoni.minQty)
@@ -193,7 +194,7 @@ var app = {
 					itNode.addClass('purple');
 				else
 					itNode.addClass('drakbrown');
-				ccNode.append(itNode);
+				ddNode.append(itNode);
 			});
 			cc.append(ccNode);
 		});

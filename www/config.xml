@@ -4,7 +4,7 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "com.popbonet.marzoni"
-        version   = "1.2.9">
+        version   = "1.2.10">
 
     <name>Marzoni</name>
 
@@ -132,7 +132,7 @@
     </platform>
     <!-- Define app splash screen for each platform. -->
 	<preference name="SplashScreen" value="screen" />
-	<preference name="SplashScreenDelay" value="10000" />
+	<preference name="SplashScreenDelay" value="5000" />
     <gap:splash src="splash.png" platform="android"/>
     <splash src="ldpi.png" platform="android" qualifier="ldpi" />
     <splash src="mdpi.png" platform="android" qualifier="mdpi" />

@@ -305,7 +305,16 @@ ul.bxslider{
 
 #book_result_container span {
     font-size: 1.5em;
-    padding: 1%;
+    padding: 2px;
+	float:left;
+}
+
+.bookSearchContainer table {
+    margin: 0 auto;
+}
+
+.bookSearchContainer td {
+    vertical-align: top;
 }
 
 .ui-content {
@@ -339,7 +348,7 @@ ul.bxslider{
 
 .bookTitle {
     font-size: 4em;
-    padding-top: 2%;
+    padding-top: 5%;
     text-align: center;
     width: 100%;
 }
@@ -357,4 +366,8 @@ ul.bxslider{
 
 .bookSearchContainer div {
     display: table-cell;
+}
+
+.bookSearchContainer li{
+	padding:0px 2%;
 }
