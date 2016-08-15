@@ -140,7 +140,8 @@ var app = {
 
            $('#item_found').show(function(){
 				$('.bxslider').height(_W);
-              slider.reloadSlider();
+				setTimeout(function(){ slider.reloadSlider(); }, 1000);
+              
            });
 
            $.each(json.function, function(key, value){
