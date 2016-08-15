@@ -32,7 +32,8 @@ var app = {
           infiniteLoop: false,
           hideControlOnEnd: true,
           touchEnabled:true,
-          preventDefaultSwipeY:true
+          preventDefaultSwipeY:true,
+		  adaptiveHeight: true
         }); 
 
         var lang = localStorage.getItem('lang');
