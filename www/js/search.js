@@ -128,9 +128,11 @@ var app = {
             else
                 $('[item-data="qtyLv"]').addClass('lv_green');
 			$('.bxslider').html("");
+			var loadingGif=$('<li><img src="img/loading.gif" /></li>');
+			loadingGif.width(_W).height(_W);
+			$('.bxslider').append(loadingGif);
             if(json.images.length == 0){
 				$('.bxslider').append('<li><img src="img/product_detail/default.jpg" /></li>');
-				$('.item_image').css("background-image",'url("img/no-image-thumb.png"');
             }else{
 				$('.item_image').css("background-image",'none');
 				for(var i = 0; i < json.images.length; i++){
@@ -140,7 +142,10 @@ var app = {
 
            $('#item_found').show(function(){
 				$('.bxslider').height(_W);
-				setTimeout(function(){ slider.reloadSlider(); }, 1000);
+				setTimeout(function(){ 
+					loadingGif.remove();
+					slider.reloadSlider(); 
+				}, 1000);
               
            });
 
