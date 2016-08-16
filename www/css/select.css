@@ -371,3 +371,35 @@ ul.bxslider{
 .bookSearchContainer li{
 	padding:0px 2%;
 }
+
+
+.footer_note div.out {
+    background-image: url("../img/product_detail/out.png");
+    background-repeat: no-repeat;
+    color: #6e3f34;
+    display: inline-block;
+    font-size: 1.2em;
+    padding-left: 30px;
+    text-align: left;
+}
+
+
+.footer_note div.t_out {
+    background-image: url("../img/product_detail/t_out.png");
+    background-repeat: no-repeat;
+    color: #6e3f34;
+    display: inline-block;
+    font-size: 1.2em;
+    padding-left: 30px;
+    text-align: left;
+}
+
+.footer_note div.available {
+    background-image: url("../img/product_detail/available.png");
+    background-repeat: no-repeat;
+    color: #6e3f34;
+    display: inline-block;
+    font-size: 1.2em;
+    padding-left: 30px;
+    text-align: left;
+}

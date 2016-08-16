@@ -225,7 +225,7 @@ $( document ).ready(function() {
 
 function refreshLang(){
   $.each(langWord, function(key, value){
-    $('[item-label="'+key+'"]').text(value);
+    $('[item-label="'+key+'"]').html(nl2br(value));
   });
 }
 
@@ -234,4 +234,9 @@ function refreshStrLang(str){
     str = str.replace(key, value);
   });
   return str;
+}
+
+function nl2br (str, is_xhtml) {   
+    var breakTag = (is_xhtml || typeof is_xhtml === 'undefined') ? '<br />' : '<br>';    
+    return (str + '').replace(/([^>\r\n]?)(\r\n|\n\r|\r|\n)/g, '$1'+ breakTag +'$2');
 }
