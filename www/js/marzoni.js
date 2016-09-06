@@ -1,9 +1,9 @@
 var marzoni = {
 
 	serverUrl: "http://58.64.129.183",
-	minQty:5,
+	minQty:8,
 	avgQty:50,
-	marzoni_version: '1.2.1'
+	marzoni_version: '1.2.2'
 }
 
 function chaneLanguage(lang, cb){

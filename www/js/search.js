@@ -121,9 +121,9 @@ var app = {
             if(json.qty == 0 || !json.active ){
               $('[item-data="qtyLv"]').addClass('lv_red');
               $('[item-data="outofstock"]').show();
-            }else if(json.qty < marzoni.minQty)
+            }else if(json.qty <= marzoni.minQty)
                 $('[item-data="qtyLv"]').addClass('lv_red');
-            else if( json.qty < marzoni.avgQty )
+            else if( json.remarks.toString().toUpperCase().match(/TEMPORARY/gi) != null)
                 $('[item-data="qtyLv"]').addClass('lv_yellow');
             else
                 $('[item-data="qtyLv"]').addClass('lv_green');
