@@ -215,16 +215,20 @@ h1 {
     background-image: url("../img/product_detail/png/stock_bar_yellow.png");
 }
 
+.stock_bar_container{
+    float: right;
+    width: 30%;
+	text-align: center;
+}
 .stock_bar {
-    background-position: center center;
+    background-position: center bottom;
     background-repeat: no-repeat;
     background-size: contain;
     float: right;
-    height: 10px;
-    margin-right: 20px;
-    padding: 40px 0;
-    width: 30%;
-	text-align: center;
+    height: 1em;
+    padding: 0 0 25%;
+    text-align: center;
+    width: 100%;
 }
 
 .ui-grid-a > .ui-block-a, .ui-grid-a > .ui-block-b {
@@ -345,6 +349,9 @@ ul.bxslider{
 .drakbrown{
 	color: #6e3f34;
 }
+span.brown{
+	color: #6e3f34;
+}
 
 .bookTitle {
     font-size: 4em;
@@ -396,6 +403,16 @@ ul.bxslider{
 
 .footer_note div.available {
     background-image: url("../img/product_detail/available.png");
+    background-repeat: no-repeat;
+    color: #6e3f34;
+    display: inline-block;
+    font-size: 1.2em;
+    padding-left: 30px;
+    text-align: left;
+}
+
+.footer_note div.available-green {
+    background-image: url("../img/product_detail/available-green.png");
     background-repeat: no-repeat;
     color: #6e3f34;
     display: inline-block;
