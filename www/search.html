@@ -101,10 +101,14 @@
                     </div>
                     <div class="item_info">
                         <div item-data="item_name" class="item_name"></div>
-                        <div item-data='qtyLv' class="stock_bar">
-							<span item-data="outofstock" class="outofstock">OUT OF STOCK<br></span>
+						<div class="stock_bar_container">
+							<div item-data='qtyLv' class="stock_bar">
+								<span item-data="outofstock" class="outofstock">OUT OF STOCK<br></span>
+								
+							</div>
+							<span item-data="remarks" class="outofstock"></span>
 						</div>
-                    </div>;
+                    </div>
                     <div class="item_data_detail" style="width:60%;margin-right:36%">
                         <table width=100%>
                             <tr>
@@ -151,7 +155,7 @@
 					<tr>
 						<td width="25%"><div class="out" item-label="item_out">OUT</div></td>
 						<td width="45%"><div class="t_out" item-label="item_t_out">Temporary Out</div></td>
-						<td width="30%"><div class="available" item-label="item_available">Available</div></td>
+						<td width="30%"><div class="available-green" item-label="item_available">Available</div></td>
 					</tr>
 				</table>
             </div><!-- /Footer -->

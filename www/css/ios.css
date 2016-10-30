@@ -17,16 +17,6 @@ body {
     padding: 1% 0;
 }
 
-.stock_bar {
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    float: right;
-    height: 10px;
-    margin-right: 10px;
-    padding: 0 0 10%;
-}
-
 .bx-wrapper .bx-viewport {
     background: transparent none repeat scroll 0 0;
     border: 0px solid;
