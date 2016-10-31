@@ -107,6 +107,7 @@ var app = {
 		$('.outofstock').hide();
         if(!json['error']){
             $('.bxslider').show();
+			var itemRemarks = nl2br(json.remarks.join("<br>").replace(";","<br>"));
 			$('[item-data="item_number"]').html(json.item_number);
 			$('[item-data="item_name"]').html(json.full_name);
 			$('[item-data="pd_name"]').html(json.pd_name);
@@ -116,18 +117,19 @@ var app = {
 			$('[item-data="colour"]').html(refreshStrLang(json.colour.join("<br>")));
 			$('[item-data="style"]').html(refreshStrLang(json.style.join("<br>")));
 			$('[item-data="location"]').html(json.location.join("<br>"));
-			$('[item-data="remarks"]').html(nl2br(json.remarks.join("<br>").replace(";","<br>")));
+			$('[item-data="remarks"]').html(itemRemarks);
 			$('[item-data="qtyLv"]').removeClass('lv_red').removeClass('lv_yellow').removeClass('lv_green');
 			
             if(json.qty == 0 || !json.active ){
               $('[item-data="qtyLv"]').addClass('lv_red');
               $('.outofstock').show();
-            }else if(json.qty <= marzoni.minQty)
+	    }else if( itemRemarks.toUpperCase().match(/TEMPORARY OUT OF STOCK/gi) != null){
+                $('[item-data="qtyLv"]').addClass('lv_yellow');	     
+	    }else if(json.qty <= marzoni.minQty){
                 $('[item-data="qtyLv"]').addClass('lv_red');
-            else if( json.remarks.toString().toUpperCase().match(/TEMPORARY/gi) != null)
-                $('[item-data="qtyLv"]').addClass('lv_yellow');
-            else
+	    }else{
                 $('[item-data="qtyLv"]').addClass('lv_green');
+	    }
 			$('.bxslider').html("");
 			var loadingGif=$('<li><img src="img/loading.gif" /></li>');
 			loadingGif.width(_W).height(_W);
