@@ -128,6 +128,7 @@ var app = {
 		$('[item-data="remarks"]').show();
 	    }else if(json.qty <= marzoni.minQty){
                 $('[item-data="qtyLv"]').addClass('lv_red');
+		$('.outofstock').show();
 	    }else{
                 $('[item-data="qtyLv"]').addClass('lv_green');
 	    }
