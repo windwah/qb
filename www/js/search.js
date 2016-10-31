@@ -124,7 +124,8 @@ var app = {
               $('[item-data="qtyLv"]').addClass('lv_red');
               $('.outofstock').show();
 	    }else if( itemRemarks.toUpperCase().match(/TEMPORARY OUT OF STOCK/gi) != null){
-                $('[item-data="qtyLv"]').addClass('lv_yellow');	     
+                $('[item-data="qtyLv"]').addClass('lv_yellow');	
+		$('[item-data="remarks"]').show();
 	    }else if(json.qty <= marzoni.minQty){
                 $('[item-data="qtyLv"]').addClass('lv_red');
 	    }else{
