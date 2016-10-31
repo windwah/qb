@@ -107,7 +107,7 @@ var app = {
 		$('.outofstock').hide();
         if(!json['error']){
             $('.bxslider').show();
-			var itemRemarks = nl2br(json.remarks.join("<br>").replace(";","<br>"));
+			var itemRemarks = nl2br(json.remarks.join("<br>").replace(/;/gi,"<br>"));
 			$('[item-data="item_number"]').html(json.item_number);
 			$('[item-data="item_name"]').html(json.full_name);
 			$('[item-data="pd_name"]').html(json.pd_name);
