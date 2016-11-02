@@ -108,6 +108,7 @@ var app = {
         if(!json['error']){
             $('.bxslider').show();
 			var itemRemarks = nl2br(json.remarks.join("<br>").replace(/;/gi,"<br>"));
+			var inventoryStatus = nl2br(json.inventory_status.join("<br>").replace(/;/gi,"<br>"));
 			$('[item-data="item_number"]').html(json.item_number);
 			$('[item-data="item_name"]').html(json.full_name);
 			$('[item-data="pd_name"]').html(json.pd_name);
@@ -120,13 +121,13 @@ var app = {
 			$('[item-data="remarks"]').html(itemRemarks);
 			$('[item-data="qtyLv"]').removeClass('lv_red').removeClass('lv_yellow').removeClass('lv_green');
 			
-            if(json.qty == 0 || !json.active ){
+            if(json.qty <= marzoni.minQty ){
               $('[item-data="qtyLv"]').addClass('lv_red');
               $('.outofstock').show();
-	    }else if( itemRemarks.toUpperCase().match(/TEMPORARY OUT OF STOCK/gi) != null){
+	    }else if( inventoryStatus.toUpperCase().match(/TEMPORARY/gi) != null){
                 $('[item-data="qtyLv"]').addClass('lv_yellow');	
 		$('[item-data="remarks"]').show();
-	    }else if(json.qty <= marzoni.minQty){
+	    }else if( inventoryStatus.toUpperCase().match(/INACTIVE/gi) != null){
                 $('[item-data="qtyLv"]').addClass('lv_red');
 		$('.outofstock').show();
 	    }else{
